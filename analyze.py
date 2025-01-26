@@ -103,7 +103,10 @@ def llm(prompt, context):
 
 def generate_questions(job_description, context="You are a recruiter for a company that is hiring for a new position.\n\
                         You need to generate questions to ask candidates during the interview process.\n\
-                        Write a list of questions that you would ask the candidates, testing keywords from the job description."):
+                        Write a list of questions that you would ask the candidates, testing keywords from the job description.\n\
+                        The questions should start with a dash and a space before each question, like this:\n\
+                        - What experience do you have with Python programming?\n\
+                        - How do you handle conflict in the workplace?"):
     content = llm(job_description, context)
     return content
 

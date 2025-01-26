@@ -16,24 +16,34 @@ function DefaultPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('Submit button clicked');
-    const formData = new FormData();
-    console.log('Selected file:', file);
-    formData.append('file', file);
-  
-    try {
-      const res = await fetch('http://localhost:4000/upload', {
-        method: 'POST',
-        body: formData,
-      });
-      console.log('Response from server:', res);
-      const data = await res.json();
-      console.log('Parsed response data:', data);
-      setResponse(data);
-    } catch (error) {
-      console.error('Error uploading file:', error);
+    setError(null);
+    setResponse(null);
+
+  const formData = new FormData();
+  if (!file) {
+    setError("Please select a file before uploading.");
+    return;
+  }
+  formData.append("file", file);
+
+  try {
+    const res = await fetch("http://localhost:4000/upload", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!res.ok) {
+      const errorText = await res.text(); // Capture error message from the backend
+      throw new Error(`Server error: ${errorText}`);
     }
-  };
+
+    const data = await res.json();
+    setResponse(data);
+  } catch (error) {
+    console.error("Error during upload:", error);
+    setError("Failed to upload file. Please try again or check the server.");
+  }
+};
 
   return (
     <div>
