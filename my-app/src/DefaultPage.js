@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './DefaultPage.css';
+import './DefaultPage.css'; // Ensure the path is correct
 
 function DefaultPage() {
   const [file, setFile] = useState(null);
@@ -16,9 +16,6 @@ function DefaultPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setError(null);
-    setResponse(null);
-
     const formData = new FormData();
     if (!file) {
       setError("Please select a file before uploading.");
@@ -45,28 +42,44 @@ function DefaultPage() {
     }
   };
 
-  return (
-    <div>
-      <title>Interview Helper</title>
-      <h1 className="text">Interview Helper</h1>
-      <h2 className="text">Submit audio files below</h2>
+  const renderResponse = () => {
+    if (!response) return null;
 
-      <form className="text" onSubmit={handleSubmit}>
-        <label htmlFor="fileInput">Choose an audio file: </label>
-        <br />
+    // Split the transcript into segments based on "Speaker"
+    const segments = response.feedback.transcription.split(/(?=Speaker)/g);
+
+    return (
+      <div>
+        <h2>Analysis Result:</h2>
+        <h3>Tips:</h3>
+        <ul style={{textAlign: 'justify', lineHeight: '1.5'}}>
+          {response.feedback.tips.map((tip, index) => (
+            <li key={index}>{tip}</li>
+          ))}
+        </ul>
+        <h3>Transcription:</h3>
+        <div className="transcript-box">
+          {segments.map((segment, index) => (
+            <p key={index}>{segment.trim()}</p>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className="DefaultPage">
+      <h1>Interview Helper</h1>
+      <form onSubmit={handleSubmit}>
         <input
           type="file"
           id="fileInput"
-          name="file"
-          accept="audio/*"
           className="file-input"
           onChange={handleFileChange}
         />
-        <br />
         <button type="button" className="custom-button" onClick={handleButtonClick}>
           {file ? file.name : "Browse"}
         </button>
-        <br /><br />
         <input id="submit-button" type="submit" value="Upload" />
       </form>
 
@@ -75,22 +88,15 @@ function DefaultPage() {
         {error && <p className="error">{error}</p>}
         {response ? (
           <div className="feedback-text">
-            <h3>Tips:</h3>
-            <ul>
-              {response.feedback.tips.map((tip, index) => (
-                <li key={index}>{tip}</li>
-              ))}
-            </ul>
-            <h3>Transcription:</h3>
-            <p>{response.feedback.transcription}</p>
+            {renderResponse()}
           </div>
         ) : (
           <textarea
             id="feedback"
             className="feedback-box"
-            placeholder="Feedback will appear here..."
             readOnly
-          ></textarea>
+            value="No feedback available."
+          />
         )}
       </div>
     </div>
