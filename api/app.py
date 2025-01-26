@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 import os
+import json
 from flask_cors import CORS
+import analyze
 
 app = Flask(__name__)
 CORS(app)
@@ -37,14 +39,17 @@ def upload_file():
 def generate_feedback(file_path):
     # Placeholder logic for feedback generation
     # Replace this with actual audio processing/transcription logic
-    return {
-        "transcription": "This is a placeholder transcription.",
+    out = analyze.main(file_path)
+    print(type(out))
+    res = {
+        "transcription": out["transcript"],
         "tips": [
-            "Try to speak more clearly.",
-            "Avoid filler words like 'um' and 'uh'.",
-            "Practice maintaining a steady pace."
+            i["feedback"] for i in out["short_form"]
         ]
     }
+    print(res)
+    print(type(res))
+    return res
 
 @app.route('/')
 def index():
