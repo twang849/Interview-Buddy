@@ -25,7 +25,7 @@ def upload_file():
         file.save(file_path)
 
         # Placeholder: Generate feedback (replace this with actual audio processing)
-        feedback = generate_feedback(file_path)
+        feedback = generate_feedback_questions(file_path)
 
         return jsonify({
             'message': 'File uploaded and feedback generated successfully!',
@@ -38,32 +38,22 @@ def upload_file():
 @app.route('/analyze-text', methods=['POST'])
 def analyze_text():
     data = request.get_json()
-    text = data.get('text', '')
-    if not text:
+    job_desc = data.get('text', '')
+    if not job_desc:
         return jsonify(error='No text provided.'), 400
 
     try:
-        # Replace this with actual text analysis logic
-        analysis_result = {
-            'feedback': {
-                'transcription': text,
-                'tips': ['Tip 1', 'Tip 2', 'Tip 3']
-            }
+        questions = analyze.generate_questions(job_desc)
+        questions = questions.split("\n")
+        questions = [q[2:] for q in questions if q.startswith("- ")]
+        with open("questions.txt", "w") as f:
+            f.write("\n".join(questions))
+        return {
+            "questions": questions
         }
-        return jsonify(analysis_result), 200
     except Exception as e:
         app.logger.error(f"Error during text analysis: {e}")
         return jsonify(error='Internal server error.'), 500
-
-def prepare_questions(job_desc):
-    questions = analyze.generate_questions(job_desc)
-    questions = questions.split("\n")
-    questions = [q[2:] for q in questions if q.startswith("- ")]
-    with open("questions.txt", "w") as f:
-        f.write("\n".join(questions))
-    return {
-        "questions": questions
-    }
 
 def generate_feedback_questions(file_path):
     # Placeholder logic for feedback generation

@@ -4,6 +4,7 @@ import './DefaultPage.css'
 function DefaultPage() {
   const [file, setFile] = useState(null);
   const [response, setResponse] = useState(null);
+  const [questions, setQuestions] = useState(null);
   const [error, setError] = useState(null);
   const [textInput, setTextInput] = useState(''); // Define the textInput state variable
 
@@ -60,7 +61,7 @@ function DefaultPage() {
       }
 
       const data = await res.json();
-      setResponse(data);
+      setQuestions(data);
     } catch (error) {
       console.error("Error during text submission:", error);
       setError("Failed to submit text. Please try again or check the server.");
@@ -92,6 +93,28 @@ function DefaultPage() {
     );
   };
 
+  const questionResponse = () => {
+    if (!questions) return null;
+
+    return (
+      <div>
+        <h2>Questions to practice:</h2>
+        {/* <h3>Tips:</h3> */}
+        <ul style={{ textAlign: 'justify', lineHeight: '1.5' }}>
+          {questions.questions.map((tip, index) => (
+            <li key={index}>{tip}</li>
+          ))}
+        </ul>
+        {/* <h3>Transcription:</h3> */}
+        {/* <div className="transcript-box" style={{textAlign: 'justify', lineHeight: 0}}>
+          {segments.map((segment, index) => (
+            <p key={index}>{segment.trim()}</p>
+          ))}
+        </div> */}
+      </div>
+    );
+  };
+
   return (
     <div className="DefaultPage">
       <h1 style={{ color: '#333' }}>Interview Helper</h1>
@@ -107,6 +130,23 @@ function DefaultPage() {
           Submit Text
         </button>
       </form>
+
+      <div className="question-container" style={{ marginTop: '20px' }}>
+        <label className="question-label" style={{ fontWeight: 'bold' }}>Practice Questions</label>
+        {error && <p className="error" style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
+        {questions ? (
+          <div className="question-text" style={{ marginTop: '10px' }}>
+            {questionResponse()}
+          </div>
+        ) : (
+          <textarea
+            id="question"
+            readOnly
+            value="No questions available."
+            style={{ resize: 'none', width: '100%', height: '100px' }}
+          />
+        )}
+      </div>
 
       <form onSubmit={handleSubmit} style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <input
