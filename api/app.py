@@ -35,6 +35,26 @@ def upload_file():
     except Exception as e:
         return jsonify({'error': f"An error occurred: {str(e)}"}), 500
 
+@app.route('/analyze-text', methods=['POST'])
+def analyze_text():
+    data = request.get_json()
+    text = data.get('text', '')
+    if not text:
+        return jsonify(error='No text provided.'), 400
+
+    try:
+        # Replace this with actual text analysis logic
+        analysis_result = {
+            'feedback': {
+                'transcription': text,
+                'tips': ['Tip 1', 'Tip 2', 'Tip 3']
+            }
+        }
+        return jsonify(analysis_result), 200
+    except Exception as e:
+        app.logger.error(f"Error during text analysis: {e}")
+        return jsonify(error='Internal server error.'), 500
+
 def prepare_questions(job_desc):
     questions = analyze.generate_questions(job_desc)
     questions = questions.split("\n")

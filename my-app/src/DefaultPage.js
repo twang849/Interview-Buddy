@@ -42,6 +42,30 @@ function DefaultPage() {
     }
   };
 
+  const handleTextSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const res = await fetch("http://127.0.0.1:4000/analyze-text", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ text: textInput }),
+      });
+
+      if (!res.ok) {
+        const errorText = await res.text(); // Capture error message from the backend
+        throw new Error(`Server error: ${errorText}`);
+      }
+
+      const data = await res.json();
+      setResponse(data);
+    } catch (error) {
+      console.error("Error during text submission:", error);
+      setError("Failed to submit text. Please try again or check the server.");
+    }
+  };
+
   const renderResponse = () => {
     if (!response) return null;
 
