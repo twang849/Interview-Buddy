@@ -117,7 +117,7 @@ function DefaultPage() {
 
   return (
     <div className="DefaultPage">
-      <h1 style={{ color: '#333' }}>Interview Helper</h1>
+      <h1 style={{ color: '#333' }}>InterviewBuddy</h1>
 
       <form onSubmit={handleTextSubmit} style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <textarea
@@ -135,7 +135,7 @@ function DefaultPage() {
         <label className="question-label" style={{ fontWeight: 'bold' }}>Practice Questions</label>
         {error && <p className="error" style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
         {questions ? (
-          <div className="question-text" style={{ marginTop: '10px' }}>
+          <div className="question-text" style={{ marginLeft: '100px', marginTop: '10px' }}>
             {questionResponse()}
           </div>
         ) : (
