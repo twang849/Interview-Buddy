@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './DefaultPage.css'; // Ensure the path is correct
 
 function DefaultPage() {
   const [file, setFile] = useState(null);
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
+  const [textInput, setTextInput] = useState(''); // Define the textInput state variable
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -76,7 +76,7 @@ function DefaultPage() {
       <div>
         <h2>Analysis Result:</h2>
         <h3>Tips:</h3>
-        <ul style={{textAlign: 'justify', lineHeight: '1.5'}}>
+        <ul style={{ textAlign: 'justify', lineHeight: '1.5' }}>
           {response.feedback.tips.map((tip, index) => (
             <li key={index}>{tip}</li>
           ))}
@@ -92,34 +92,47 @@ function DefaultPage() {
   };
 
   return (
-    <div className="DefaultPage">
-      <h1>Interview Helper</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="DefaultPage" style={{ textAlign: 'center', margin: '20px', paddingTop: '20px' }}>
+      <h1 style={{ color: '#333' }}>Interview Helper</h1>
+      <form onSubmit={handleSubmit} style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <input
           type="file"
           id="fileInput"
           className="file-input"
+          style={{ display: 'none' }}
           onChange={handleFileChange}
         />
-        <button type="button" className="custom-button" onClick={handleButtonClick}>
+        <button type="button" className="custom-button" onClick={handleButtonClick} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', cursor: 'pointer', fontSize: '16px', borderRadius: '15px', marginTop: '10px' }}>
           {file ? file.name : "Browse"}
         </button>
-        <input id="submit-button" type="submit" value="Upload" />
+        <input id="submit-button" type="submit" value="Upload" style={{ borderRadius: '10px', padding: '5px', marginTop: '10px' }} />
       </form>
 
-      <div className="feedback-container">
-        <label className="feedback-label">Feedback</label>
-        {error && <p className="error">{error}</p>}
+      <form onSubmit={handleTextSubmit} style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <textarea
+          value={textInput}
+          onChange={(e) => setTextInput(e.target.value)}
+          placeholder="Enter text to analyze"
+          style={{ width: '300px', height: '150px', padding: '10px', fontSize: '16px', border: '1px solid #ccc', borderRadius: '5px', marginTop: '10px' }}
+        />
+        <button type="submit" className="custom-button" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', cursor: 'pointer', fontSize: '16px', borderRadius: '15px', marginTop: '10px' }}>
+          Submit Text
+        </button>
+      </form>
+
+      <div className="feedback-container" style={{ marginTop: '20px' }}>
+        <label className="feedback-label" style={{ fontWeight: 'bold' }}>Feedback</label>
+        {error && <p className="error" style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
         {response ? (
-          <div className="feedback-text">
+          <div className="feedback-text" style={{ marginTop: '10px' }}>
             {renderResponse()}
           </div>
         ) : (
           <textarea
             id="feedback"
-            className="feedback-box"
             readOnly
             value="No feedback available."
+            style={{ resize: 'none', width: '100%', height: '100px' }}
           />
         )}
       </div>
