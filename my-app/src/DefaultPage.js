@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './DefaultPage.css'
 
 function DefaultPage() {
   const [file, setFile] = useState(null);
@@ -82,7 +83,7 @@ function DefaultPage() {
           ))}
         </ul>
         <h3>Transcription:</h3>
-        <div className="transcript-box">
+        <div className="transcript-box" style={{textAlign: 'justify', lineHeight: 0}}>
           {segments.map((segment, index) => (
             <p key={index}>{segment.trim()}</p>
           ))}
@@ -92,8 +93,21 @@ function DefaultPage() {
   };
 
   return (
-    <div className="DefaultPage" style={{ textAlign: 'center', margin: '20px', paddingTop: '20px' }}>
+    <div className="DefaultPage">
       <h1 style={{ color: '#333' }}>Interview Helper</h1>
+
+      <form onSubmit={handleTextSubmit} style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <textarea
+          value={textInput}
+          onChange={(e) => setTextInput(e.target.value)}
+          placeholder="Copy and paste job description/posting below, then hit 'Submit Text'!"
+          style={{ width: '300px', height: '150px', padding: '10px', fontSize: '16px', border: '1px solid #ccc', borderRadius: '5px', marginTop: '10px' }}
+        />
+        <button type="submit" className="custom-button" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', cursor: 'pointer', fontSize: '16px', borderRadius: '15px', marginTop: '10px' }}>
+          Submit Text
+        </button>
+      </form>
+
       <form onSubmit={handleSubmit} style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <input
           type="file"
@@ -106,18 +120,6 @@ function DefaultPage() {
           {file ? file.name : "Browse"}
         </button>
         <input id="submit-button" type="submit" value="Upload" style={{ borderRadius: '10px', padding: '5px', marginTop: '10px' }} />
-      </form>
-
-      <form onSubmit={handleTextSubmit} style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <textarea
-          value={textInput}
-          onChange={(e) => setTextInput(e.target.value)}
-          placeholder="Enter text to analyze"
-          style={{ width: '300px', height: '150px', padding: '10px', fontSize: '16px', border: '1px solid #ccc', borderRadius: '5px', marginTop: '10px' }}
-        />
-        <button type="submit" className="custom-button" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', cursor: 'pointer', fontSize: '16px', borderRadius: '15px', marginTop: '10px' }}>
-          Submit Text
-        </button>
       </form>
 
       <div className="feedback-container" style={{ marginTop: '20px' }}>
