@@ -1,0 +1,48 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    background-color: rgb(198, 231, 241);
+    padding: 100px 5px;
+    border-radius: 10%;
+    background-size: contain;
+  }
+
+.username{
+    padding-right: 0.5cm;
+    padding-left: 0.5cm;
+    padding-bottom: 0.5cm;
+    
+}
+
+.password{
+    
+    padding: 0.5cm;
+}
+
+
+
+.login-btn{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 15px;
+    margin-top: 0.7cm;
+}
+
+.login-btn:hover{
+    background-color: #0056b3;
+}

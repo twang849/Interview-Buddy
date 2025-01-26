@@ -1,0 +1,12 @@
+{
+  "name": "interview-helper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/luckyducky037/interview-helper",
+  "author": "luckyducky037 <leonardozhou2020@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@deepgram/sdk": "^3.9.0",
+    "mongodb": "^6.12.0"
+  }
+}
