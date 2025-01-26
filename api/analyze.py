@@ -1,7 +1,6 @@
 import os
 import sys
 import json
-from flask import jsonify
 from openai import OpenAI
 from dotenv import load_dotenv
 from deepgram import (
@@ -76,7 +75,7 @@ def analyze_transcript(filename, mode="interview", transcript_only=False):
                    "start":i["start"],
                    "end":i["end"]} for i in parse["paragraphs"]]
     pauses = [paragraphs[i+1]["start"] - paragraphs[i]["end"] for i in range(len(paragraphs) - 1)]
-    pauses = [i - i % 0.01 for i in pauses]
+    # pauses = [i - i % 0.01 for i in pauses]
     prompt_modes = {
         "interview" : "Analyze how the interview went, given the following transcript.\n"
     }
@@ -89,21 +88,29 @@ def analyze_transcript(filename, mode="interview", transcript_only=False):
         processed += "\n"
         if i != len(paragraphs) - 1:
             if pauses[i] > 0:
-                processed += " (pause for " + str(pauses[i]) + " seconds) "
+                processed += " (pause for " + "{:.2f}".format(pauses[i]) + " seconds) "
         processed += "\n"
     return prompt_modes[mode] + processed
 
-def llm(prompt, context):
+def llm(prompt, context, questions=False):
     client = OpenAI()
-    completion = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[
+    msg = [
             {"role": "developer", "content": context},
             {
                 "role": "user",
                 "content": prompt
             }
         ]
+    if questions != False:
+        msg.append(
+            {
+                "role": "user",
+                "content": "I will be answering the following questions:\n" + questions
+            }
+        )
+    completion = client.chat.completions.create(
+        model="gpt-4o",
+        messages=msg
     )
     return completion.choices[0].message.content
 
@@ -143,6 +150,33 @@ def short_form(prompt, context="You give feedback on interviews based on how wel
         print(f"Error in short_form: {e}", file=sys.stderr)
         return []
 
+def long_form_questions(prompt, questions, context="You give feedback on interviews based on how well they went and the strengths and weaknesses of the interviewee.\n\
+        You give feedback in the following format:\n\
+            - Summary of the interview, including main topics discussed and how the interview went overall\n\
+            - Strengths of the interviewee\n\
+            - Areas of improvement for the interviewee\n\
+        Write all content, including the summary, strengths, and weaknesses, to be directed towards the interviewee who will read this."):
+    return llm(prompt, context, questions)
+
+def short_form_questions(prompt, questions, context="You give feedback on interviews based on how well they went and the strengths and weaknesses of the interviewee.\n\
+        You give feedback in the following format, with each section separated by new lines:\n\
+            - An exact copy of the section that is referenced, without ellipses or any other modifications, surrounded by double quotes\n\
+            - Your feedback, bolded and separated from the quoted section by an unbolded space, tilde, and another space\n\
+                Write all content, including the quoted section and feedback, to be directed towards the interviewee who will read this.\n\
+        For example, this is how your feedback should be formatted:\n\
+            \"What\'s the salary for this job?\" ~ **This question was asked too early, and is inappropriate for the first interview.**\n\
+            \"What projects can I expect to take on in this role?\" ~ **This question shows your curiosity for the company, which is great.**"):
+    try:
+        result = llm(prompt, context, questions)
+        result = result.split("\n")  # Split into lines
+        result = [i.split(" ~ ") for i in result if " ~ " in i]  # Split valid entries
+        result = [{"quote": i[0], "feedback": i[1]} for i in result if len(i) == 2]  # Validate
+        result = [{"quote": i["quote"][1:-1], "feedback": i["feedback"][2:-2]} for i in result]
+        return result
+    except Exception as e:
+        print(f"Error in short_form: {e}", file=sys.stderr)
+        return []
+
 def main(filename):
     prompt = analyze_transcript(filename)
     print(prompt)
@@ -151,6 +185,18 @@ def main(filename):
     shortform = short_form(prompt)
     print(shortform)
     result = {"transcript": prompt, "long_form": longform, "short_form": shortform}
+    return result
+
+def main_questions(filename):
+    with open("questions.txt", "r") as f:
+        questions = f.read()
+    prompt = analyze_transcript(filename)
+    print(prompt)
+    longform = long_form_questions(prompt, questions)
+    print(longform)
+    shortform = short_form_questions(prompt, questions)
+    print(shortform)
+    result = {"transcript": prompt, "questions": questions, "long_form": longform, "short_form": shortform}
     return result
 
 if __name__ == "__main__":

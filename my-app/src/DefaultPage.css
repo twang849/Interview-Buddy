@@ -41,6 +41,10 @@ body {
     border-radius: 10px;
     padding: 5px;
   }
+
+  #submit-button:hover{
+    background-color: #c0c0c0;
+  }
   
   .file-input {
     display: none;
