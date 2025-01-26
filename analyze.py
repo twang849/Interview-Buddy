@@ -1,5 +1,5 @@
 import os
-
+import sys
 import json
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -101,6 +101,12 @@ def llm(prompt, context):
     )
     return completion.choices[0].message.content
 
+def generate_questions(job_description, context="You are a recruiter for a company that is hiring for a new position.\n\
+                        You need to generate questions to ask candidates during the interview process.\n\
+                        Write a list of questions that you would ask the candidates, testing keywords from the job description."):
+    content = llm(job_description, context)
+    return content
+
 def long_form(prompt, context="You give feedback on interviews based on how well they went and the strengths and weaknesses of the interviewee.\n\
         You give feedback in the following format:\n\
             - Summary of the interview, including main topics discussed and how the interview went overall\n\
@@ -117,28 +123,24 @@ def short_form(prompt, context="You give feedback on interviews based on how wel
         For example, this is how your feedback should be formatted:\n\
             \"What\'s the salary for this job?\" ~ **This question was asked too early, and is inappropriate for the first interview.**\n\
             \"What projects can I expect to take on in this role?\" ~ **This question shows your curiosity for the company, which is great.**"):
-    result = llm(prompt, context)
-    result = result.split("\n")
-    result = [i.split(" ~ ") for i in result]
-    result = [i for i in result if i != [""]]
-    result = [{"quote": i[0], "feedback": i[1]} for i in result]
-    result = [{"quote": i["quote"][1:-1], "feedback": i["feedback"][2:-2]} for i in result]
-    
-    return result
+    try:
+        result = llm(prompt, context)
+        result = result.split("\n")  # Split into lines
+        result = [i.split(" ~ ") for i in result if " ~ " in i]  # Split valid entries
+        result = [{"quote": i[0], "feedback": i[1]} for i in result if len(i) == 2]  # Validate
+        result = [{"quote": i["quote"][1:-1], "feedback": i["feedback"][2:-2]} for i in result]
+        return result
+    except Exception as e:
+        print(f"Error in short_form: {e}", file=sys.stderr)
+        return []
 
 if __name__ == "__main__":
     # filename = "Behavioral-Mock-Interview.mp3"
     # filename = "Job-Interview-Poor-Example.mp3"
-    filename = input()
+    filename = os.getcwd() + "/" + sys.stdin.readline().strip()
+    # print(json.dumps({"filename": filename}))
     prompt = analyze_transcript(filename)
     long_form = long_form(prompt)
     short_form = short_form(prompt)
-    print("Prompt: \n" + prompt)
-    print("Long Response: \n" + long_form)
-    print("Short Response: \n" + str(short_form))
-
-filename = input()
-prompt = analyze_transcript(filename)
-long_form = long_form(prompt)
-short_form = short_form(prompt)
-print(long_form)
+    result = {"filename": filename, "long_form": long_form, "short_form": short_form}
+    print(json.dumps(result))

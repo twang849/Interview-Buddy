@@ -3,6 +3,8 @@ const multer = require('multer');
 const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
+const bodyParser = require('body-parser');
+
 const { spawn } = require('child_process');
 
 const app = express();
@@ -11,6 +13,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Environment Variables
 const PORT = process.env.PORT || 4000;
@@ -46,6 +50,8 @@ app.post('/upload', upload.single('file'), (req, res) => {
   try {
     const audioFilePath = req.file.path;
 
+    console.log(audioFilePath)
+
     // Spawn a Python process to handle the analysis
     const pythonProcess = spawn('python3', ['../analyze.py']);
 
@@ -57,6 +63,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
 
     pythonProcess.stdout.on('data', (data) => {
       analysisResult += data.toString();
+      console.log(data.toString());
     });
 
     pythonProcess.stderr.on('data', (data) => {

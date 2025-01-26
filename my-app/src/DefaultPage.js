@@ -4,7 +4,8 @@ import './DefaultPage.css';
 function DefaultPage() {
   const [file, setFile] = useState(null);
   const [response, setResponse] = useState(null);
-
+  const [error, setError] = useState(null);
+  
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
