@@ -1,7 +1,7 @@
 .DefaultPage {
   text-align: center;
   margin: 100px;
-  padding-top: 500px;
+  padding-top: 100px;
   overflow-y: auto;
 }
 body {
@@ -137,4 +137,8 @@ body {
 .transcript-box p {
   margin: 5px 0;
   line-height: 1.2;
+}
+
+.question-label {
+  font-size: 30px;
 }

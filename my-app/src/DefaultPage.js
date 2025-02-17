@@ -98,7 +98,6 @@ function DefaultPage() {
 
     return (
       <div>
-        <h2>Questions to practice:</h2>
         {/* <h3>Tips:</h3> */}
         <ul style={{ textAlign: 'justify', lineHeight: '1.5' }}>
           {questions.questions.map((tip, index) => (
@@ -117,7 +116,7 @@ function DefaultPage() {
 
   return (
     <div className="DefaultPage">
-      <h1 style={{ color: '#333' }}>InterviewBuddy</h1>
+      <h1 style={{ color: '#333', fontSize: '70px' }}>InterviewBuddy</h1>
 
       <form onSubmit={handleTextSubmit} style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <textarea
