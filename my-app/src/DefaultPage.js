@@ -123,7 +123,7 @@ function DefaultPage() {
           value={textInput}
           onChange={(e) => setTextInput(e.target.value)}
           placeholder="Copy and paste job description/posting below, then hit 'Submit Text'!"
-          style={{ width: '300px', height: '150px', padding: '10px', fontSize: '16px', border: '1px solid #ccc', borderRadius: '5px', marginTop: '10px' }}
+          style={{ resize: 'none', width: '450px', height: '250px', padding: '10px', fontSize: '16px', border: '1px solid #ccc', borderRadius: '5px', marginTop: '10px' }}
         />
         <button type="submit" className="custom-button" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', cursor: 'pointer', fontSize: '16px', borderRadius: '15px', marginTop: '10px' }}>
           Submit Text

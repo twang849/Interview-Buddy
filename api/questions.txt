@@ -1,13 +1,15 @@
-Can you describe your experience with producing algorithmic methodologies and codes?
-What are some Machine Learning techniques you have developed or worked with, and how have they been beneficial?
-Share an example of a project where you had to mine unstructured data. What technology tools did you use?
-How do you leverage visualization toolkits to uncover strategic insights and make prescriptive solutions?
-Describe a situation where you collaborated with internal and external clients to create useable analytic datasets.
-Can you discuss your experience with integrating and preparing large, varied datasets for analytical needs?
-Have you worked on operationalizing predictive models for feature generation or implementing recommendation engines and AI chatbots? If so, please elaborate.
-In your previous roles, how did you manage data resource identification and verification?
-Describe a time when you collaborated with business areas to assist with evidence-based decision making.
-Can you provide an example of how you performed reporting and analytic quantification assessments and what recommendations or solutions you developed?
-What strategies do you use for integrating analytic datasets, models, and operational systems for real-time decision making?
-How do you handle the maintenance and optimization of data models when working with external stakeholders?
-Share your experience with participating in divisional projects, forums, or working groups and how you manage project requirements and progress reports.
+Can you describe your experience with producing algorithmic methodologies and coding?
+What machine learning techniques have you developed in your past roles?
+How do you approach mining unstructured data using modern technology tools?
+How have you utilized visualization toolkits to discover strategic insights and provide prescriptive solutions?
+Could you provide an example of how you collaborated with internal or external clients to create analytic datasets?
+What methods do you use to engineer new data features for enterprise decision-making?
+Tell us about your experience working with predictive modeling and data science teams.
+How do you ensure the integration of analytic datasets, models, and operational systems for real-time decision-making?
+What practices do you follow to identify trends and scrape information from unstructured data sources?
+Describe a project where you operationalized predictive models or implemented recommendation engines.
+How do you manage data resource identification and verification from both internal and external sources?
+What strategies do you use to collaborate with business areas to assist in evidence-based decision making?
+Can you discuss an example of reporting and analytic quantification assessments you've performed?
+How have you contributed to the design and development of new information management products?
+Describe your experience participating in divisional projects, forums, or working groups and the outcomes achieved.

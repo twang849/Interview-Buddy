@@ -1,8 +1,8 @@
 .DefaultPage {
   text-align: center;
   margin: 100px;
-  padding-top: 100px;
-  overflow-y: auto;
+  padding-top: 10px;
+  overflow-y: default;
 }
 body {
   overflow-y: auto;
