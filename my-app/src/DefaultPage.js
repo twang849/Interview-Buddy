@@ -97,19 +97,13 @@ function DefaultPage() {
     if (!questions) return null;
 
     return (
-      <div>
-        {/* <h3>Tips:</h3> */}
+      <div className='transcript-box' style={{width:'1000px'
+      }}>
         <ul style={{ textAlign: 'justify', lineHeight: '1.5' }}>
           {questions.questions.map((tip, index) => (
             <li key={index}>{tip}</li>
           ))}
         </ul>
-        {/* <h3>Transcription:</h3> */}
-        {/* <div className="transcript-box" style={{textAlign: 'justify', lineHeight: 0}}>
-          {segments.map((segment, index) => (
-            <p key={index}>{segment.trim()}</p>
-          ))}
-        </div> */}
       </div>
     );
   };
@@ -118,14 +112,13 @@ function DefaultPage() {
     <div className="DefaultPage">
       <h1 style={{ color: '#333', fontSize: '70px' }}>InterviewBuddy</h1>
 
-      <form onSubmit={handleTextSubmit} style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <form id="submit-form" onSubmit={handleTextSubmit}>
         <textarea
+          id="job-desc-submit"
           value={textInput}
           onChange={(e) => setTextInput(e.target.value)}
-          placeholder="Copy and paste job description/posting below, then hit 'Submit Text'!"
-          style={{ resize: 'none', width: '450px', height: '250px', padding: '10px', fontSize: '16px', border: '1px solid #ccc', borderRadius: '5px', marginTop: '10px' }}
-        />
-        <button type="submit" className="custom-button" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', cursor: 'pointer', fontSize: '16px', borderRadius: '15px', marginTop: '10px' }}>
+          placeholder="Copy and paste job description/posting below, then hit 'Submit Text'!"/>
+        <button id="submit-text-button" type="submit" className="custom-button">
           Submit Text
         </button>
       </form>
@@ -134,20 +127,19 @@ function DefaultPage() {
         <label className="question-label" style={{ fontWeight: 'bold' }}>Practice Questions</label>
         {error && <p className="error" style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
         {questions ? (
-          <div className="question-text" style={{ marginLeft: '100px', marginTop: '10px' }}>
+          <div className="question-text" style={{ marginTop: '10px' }}>
             {questionResponse()}
           </div>
-        ) : (
-          <textarea
-            id="question"
-            readOnly
-            value="No questions available."
-            style={{ resize: 'none', width: '100%', height: '100px' }}
-          />
+        ) : (<div className='centered-container'>
+                <div id='questions-box'>
+                  <br></br>
+                  No questions available. Submit job posting above to receive practice questions.
+                </div>
+              </div>
         )}
       </div>
 
-      <form onSubmit={handleSubmit} style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <form onSubmit={handleSubmit} id='browse-button'>
         <input
           type="file"
           id="fileInput"
@@ -155,7 +147,7 @@ function DefaultPage() {
           style={{ display: 'none' }}
           onChange={handleFileChange}
         />
-        <button type="button" className="custom-button" onClick={handleButtonClick} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', cursor: 'pointer', fontSize: '16px', borderRadius: '15px', marginTop: '10px' }}>
+        <button type="button" className="custom-button" onClick={handleButtonClick} style={{ padding: '10px 20px', color: 'white', border: 'none', cursor: 'pointer', fontSize: '16px', borderRadius: '15px', marginTop: '10px' }}>
           {file ? file.name : "Browse"}
         </button>
         <input id="submit-button" type="submit" value="Upload" style={{ borderRadius: '10px', padding: '5px', marginTop: '10px' }} />
@@ -172,9 +164,7 @@ function DefaultPage() {
           <textarea
             id="feedback"
             readOnly
-            value="No feedback available."
-            style={{ resize: 'none', width: '100%', height: '100px' }}
-          />
+            value="No feedback available."/>
         )}
       </div>
     </div>

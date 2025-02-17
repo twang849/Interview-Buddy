@@ -1,15 +1,8 @@
-Can you describe your experience with producing algorithmic methodologies and coding?
-What machine learning techniques have you developed in your past roles?
-How do you approach mining unstructured data using modern technology tools?
-How have you utilized visualization toolkits to discover strategic insights and provide prescriptive solutions?
-Could you provide an example of how you collaborated with internal or external clients to create analytic datasets?
-What methods do you use to engineer new data features for enterprise decision-making?
-Tell us about your experience working with predictive modeling and data science teams.
-How do you ensure the integration of analytic datasets, models, and operational systems for real-time decision-making?
-What practices do you follow to identify trends and scrape information from unstructured data sources?
-Describe a project where you operationalized predictive models or implemented recommendation engines.
-How do you manage data resource identification and verification from both internal and external sources?
-What strategies do you use to collaborate with business areas to assist in evidence-based decision making?
-Can you discuss an example of reporting and analytic quantification assessments you've performed?
-How have you contributed to the design and development of new information management products?
-Describe your experience participating in divisional projects, forums, or working groups and the outcomes achieved.
+Can you describe your experience with CSS styling and specifically working with background-color properties?
+How have you implemented CSS resizing properties in past projects, and for what purpose?
+What strategies do you use to ensure that textarea elements are appropriately sized and maintain a consistent width and height across different devices?
+How do you approach setting padding and font-size to enhance user experience in UI design?
+Can you provide examples of how you've used border and border-radius properties to create aesthetically pleasing components?
+How do you ensure that your CSS styles remain responsive and adaptable to margin and layout changes?
+Have you ever encountered challenges with CSS box model concepts, and how did you resolve them?
+How do you prioritize and manage tasks that involve styling components with CSS across multiple pages or components in a larger project?
