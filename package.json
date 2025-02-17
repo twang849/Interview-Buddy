@@ -2,8 +2,8 @@
   "name": "interview-helper",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/luckyducky037/interview-helper",
-  "author": "luckyducky037 <leonardozhou2020@gmail.com>",
+  "repository": "https://github.com/twang849/Interview-Buddy",
+  "author": "twang849 <twang849@uwo.ca>",
   "license": "MIT",
   "dependencies": {
     "@deepgram/sdk": "^3.9.0",
