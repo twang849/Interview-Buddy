@@ -35,6 +35,7 @@ def upload_file():
     except Exception as e:
         return jsonify({'error': f"An error occurred: {str(e)}"}), 500
 
+# Routing for question generation from job description
 @app.route('/analyze-text', methods=['POST'])
 def analyze_text():
     data = request.get_json()

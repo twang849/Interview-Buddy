@@ -64,11 +64,14 @@ def analyze_transcript(filename, mode="interview", transcript_only=False):
         res = analyze_audio(filename)
         parse = parse_json(res)
         max_tries -= 1
+
     if (max_tries == 0):
         print("Failed to get high confidence transcript")
         return "error"
+
     if isinstance(parse, str):
         return parse  # Return the error message if parse_json returned an error
+
     transcript = parse["transcript"]
     paragraphs = [{"text":" ".join([j["text"] for j in i["sentences"]]),
                    "speaker":i["speaker"]+1,
@@ -76,12 +79,14 @@ def analyze_transcript(filename, mode="interview", transcript_only=False):
                    "end":i["end"]} for i in parse["paragraphs"]]
     pauses = [paragraphs[i+1]["start"] - paragraphs[i]["end"] for i in range(len(paragraphs) - 1)]
     # pauses = [i - i % 0.01 for i in pauses]
+
     prompt_modes = {
         "interview" : "Analyze how the interview went, given the following transcript.\n"
     }
     if transcript_only:
         return prompt_modes[mode] + transcript
     processed = ""
+    
     for i in range(len(paragraphs) - 1):
         processed += "Speaker " + str(paragraphs[i]["speaker"]) + ": "
         processed += paragraphs[i]["text"]
@@ -90,6 +95,7 @@ def analyze_transcript(filename, mode="interview", transcript_only=False):
             if pauses[i] > 0:
                 processed += " (pause for " + "{:.2f}".format(pauses[i]) + " seconds) "
         processed += "\n"
+
     return prompt_modes[mode] + processed
 
 def llm(prompt, context, questions=False):

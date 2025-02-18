@@ -1,8 +1,20 @@
-Can you describe your experience with CSS styling and specifically working with background-color properties?
-How have you implemented CSS resizing properties in past projects, and for what purpose?
-What strategies do you use to ensure that textarea elements are appropriately sized and maintain a consistent width and height across different devices?
-How do you approach setting padding and font-size to enhance user experience in UI design?
-Can you provide examples of how you've used border and border-radius properties to create aesthetically pleasing components?
-How do you ensure that your CSS styles remain responsive and adaptable to margin and layout changes?
-Have you ever encountered challenges with CSS box model concepts, and how did you resolve them?
-How do you prioritize and manage tasks that involve styling components with CSS across multiple pages or components in a larger project?
+Can you elaborate on your experience with data engineering and analytics functions?
+How have you used Azure services, such as Synapse, Data Factory, or Delta Lake, in your previous roles?
+Describe your proficiency with SQL and how you have utilized it for data extraction, transformation, and loading processes.
+What role have programming languages like Python played in your data analysis or engineering projects?
+How have you used Power BI and/or other Business Intelligence tools in creating operational or management reports?
+Can you provide an example of when you gathered and documented business requirements for a project?
+How do you approach the coordination and tracking of project deliverables?
+What strategies do you use to ensure data integrity and quality during data profiling and source-to-target mapping?
+Discuss a time when you defined and developed business and technical requirements in collaboration with stakeholders.
+How do you maintain and enhance data marts in collaboration with IT, particularly through incident and defect management processes?
+Describe your approach to validating data and ensuring its quality in Centralized Data Store environments.
+Can you discuss a process you have improved through automation to increase efficiency?
+What is your method for creating and maintaining end-user documentation and reference guides?
+How have you supported Business Analysts in compiling data and ensuring its validity and accuracy?
+Share an example of a key project you have participated in. How did you contribute to its success?
+What is your approach to developing briefing and presentation materials for management?
+How do you handle data requests from both internal and external clients?
+Explain your experience with statistical methodologies and measurements in data analysis contexts.
+Describe how you have managed multiple data sources when building data requirements and writing programs/queries.
+How have you contributed to Branch projects, and what was your role in forums and working groups?

@@ -6,8 +6,9 @@ function DefaultPage() {
   const [response, setResponse] = useState(null);
   const [questions, setQuestions] = useState(null);
   const [error, setError] = useState(null);
-  const [textInput, setTextInput] = useState(''); // Define the textInput state variable
+  const [textInput, setTextInput] = useState('');
 
+  // Helper method for uploading file
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
@@ -16,6 +17,7 @@ function DefaultPage() {
     document.getElementById('fileInput').click();
   };
 
+  // Function for handling file upload
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -32,7 +34,7 @@ function DefaultPage() {
       });
 
       if (!res.ok) {
-        const errorText = await res.text(); // Capture error message from the backend
+        const errorText = await res.text(); 
         throw new Error(`Server error: ${errorText}`);
       }
 
@@ -44,6 +46,7 @@ function DefaultPage() {
     }
   };
 
+  // Function for question generation from job description
   const handleTextSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -56,12 +59,13 @@ function DefaultPage() {
       });
 
       if (!res.ok) {
-        const errorText = await res.text(); // Capture error message from the backend
+        const errorText = await res.text(); 
         throw new Error(`Server error: ${errorText}`);
       }
 
       const data = await res.json();
       setQuestions(data);
+
     } catch (error) {
       console.error("Error during text submission:", error);
       setError("Failed to submit text. Please try again or check the server.");
@@ -101,7 +105,7 @@ function DefaultPage() {
       }}>
         <ul style={{ textAlign: 'justify', lineHeight: '1.5' }}>
           {questions.questions.map((tip, index) => (
-            <li key={index}>{tip}</li>
+            <li key={index} className='list-item'>{tip}</li>
           ))}
         </ul>
       </div>
@@ -109,37 +113,42 @@ function DefaultPage() {
   };
 
   return (
-    <div className="DefaultPage">
-      <h1 style={{ color: '#333', fontSize: '70px' }}>InterviewBuddy</h1>
+    <div className='DefaultPage'>
+      <h1 id="title" style={{ color: '#333', fontSize: '70px', paddingTop:'20px' }}>InterviewBuddy</h1>
+      {error && <p className="error" style={{ color: 'red'}}>{error}</p>}
 
-      <form id="submit-form" onSubmit={handleTextSubmit}>
-        <textarea
-          id="job-desc-submit"
-          value={textInput}
-          onChange={(e) => setTextInput(e.target.value)}
-          placeholder="Copy and paste job description/posting below, then hit 'Submit Text'!"/>
-        <button id="submit-text-button" type="submit" className="custom-button">
-          Submit Text
-        </button>
-      </form>
+      <div id="questions-and-desc">
+        {/* Job Description Submission */}
+        <form id="submit-form" onSubmit={handleTextSubmit}>
+          <textarea
+            id="job-desc-submit"
+            value={textInput}
+            onChange={(e) => setTextInput(e.target.value)}
+            placeholder="Copy and paste job description/posting below, then hit 'Submit Text'!"/> 
+          <button id="submit-text-button" type="submit" className="custom-button">
+            Submit Text
+          </button>
+        </form>
 
-      <div className="question-container" style={{ marginTop: '20px' }}>
-        <label className="question-label" style={{ fontWeight: 'bold' }}>Practice Questions</label>
-        {error && <p className="error" style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
-        {questions ? (
-          <div className="question-text" style={{ marginTop: '10px' }}>
-            {questionResponse()}
-          </div>
-        ) : (<div className='centered-container'>
-                <div id='questions-box'>
-                  <br></br>
-                  No questions available. Submit job posting above to receive practice questions.
+        {/* Questions */}
+        <div className="question-container" style={{ marginTop: '20px' }}>
+          <label className="question-label" style={{ fontWeight: 'bold' }}>Practice Questions</label>
+          {questions ? (
+            <div className="question-text" style={{ marginTop: '10px', backgroundColor:'white' }}>
+              {questionResponse()}
+            </div>
+          ) : (<div className='centered-container'>
+                  <div id='questions-box'>
+                    <br></br>
+                    No questions available. Submit job posting above to receive practice questions.
+                  </div>
                 </div>
-              </div>
-        )}
+          )}
+        </div>
       </div>
 
-      <form onSubmit={handleSubmit} id='browse-button'>
+      {/* Browse Files and Upload Button */}
+      <form onSubmit={handleSubmit} >
         <input
           type="file"
           id="fileInput"
@@ -147,15 +156,20 @@ function DefaultPage() {
           style={{ display: 'none' }}
           onChange={handleFileChange}
         />
-        <button type="button" className="custom-button" onClick={handleButtonClick} style={{ padding: '10px 20px', color: 'white', border: 'none', cursor: 'pointer', fontSize: '16px', borderRadius: '15px', marginTop: '10px' }}>
-          {file ? file.name : "Browse"}
-        </button>
-        <input id="submit-button" type="submit" value="Upload" style={{ borderRadius: '10px', padding: '5px', marginTop: '10px' }} />
+        <div id="browse-upload">
+          {/* Browse */}
+          <button type="button" id="browse-button" onClick={handleButtonClick}>
+            {file ? file.name : "Browse"}
+          </button>
+
+          {/* Upload */}
+          <input id="upload-button" type="submit" value="Upload"/>
+        </div>
       </form>
 
+      {/* Feedback Container */}
       <div className="feedback-container" style={{ marginTop: '20px' }}>
         <label className="feedback-label" style={{ fontWeight: 'bold' }}>Feedback</label>
-        {error && <p className="error" style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
         {response ? (
           <div className="feedback-text" style={{ marginTop: '10px' }}>
             {renderResponse()}
