@@ -1,12 +1,13 @@
 * {
   font-family: monospace;
-  background-color: black;
 }
 
 .DefaultPage {
   max-height: 100vh;
   text-align: center;
   overflow: visible;
+  width: 1600px;
+  /* background-color: black; */
 }
 
 
@@ -39,17 +40,9 @@ code {
   margin-top: 20px;
   /* height: 1000px; */
 }
-.feedback-label {
+.feedback-title {
   font-size: 18px;
   margin-bottom: 10px;
-}
-.feedback-box {
-  width: 300px;
-  height: 150px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  font-size: 16px;
-  resize:none;
 }
 
 .file-input {
@@ -143,8 +136,9 @@ code {
 
 #feedback {
   resize: none;
-  width: 100%;
+  width: 50%;
   height: 100px;
+  margin-bottom: 50px;
 }
 
 #tips {
@@ -169,7 +163,6 @@ code {
 
 .question-text {
   margin-top: 10px;
-  background-color: white;
 }
 
 .question-label {
@@ -250,4 +243,20 @@ code {
 #questions-and-desc {
   display: flex;
   flex-direction: row;
+}
+
+#title-box {
+  background-color: slategray;
+  /* width: 2000px; */
+}
+
+#flex-helper {
+  display: flex;
+  justify-content: center;
+}
+
+#title {
+  color: #333;
+  font-size: 70px;
+  padding: 10px;
 }

@@ -113,35 +113,38 @@ function DefaultPage() {
 
   return (
     <div className='DefaultPage'>
-      <h1 id="title" style={{ color: '#333', fontSize: '70px', paddingTop:'20px' }}>InterviewBuddy</h1>
-      {error && <p className="error" style={{ color: 'red'}}>{error}</p>}
+      <div id="title-box">
+        <h1 id="title"> InterviewBuddy</h1>
+        {error && <p className="error" style={{ color: 'red'}}>{error}</p>}
+      </div>
+      <div id="flex-helper">
+        <div id="questions-and-desc">
+          {/* Job Description Submission */}
+          <form id="job-desc-container" onSubmit={handleTextSubmit}>
+            <textarea
+              id="job-desc-submit"
+              value={textInput}
+              onChange={(e) => setTextInput(e.target.value)}
+              placeholder="Copy and paste job description/posting below, then hit 'Submit Text'!"/> 
+            <button id="submit-text-button" type="submit" className="custom-button">
+              Submit Text
+            </button>
+          </form>
 
-      <div id="questions-and-desc">
-        {/* Job Description Submission */}
-        <form id="job-desc-container" onSubmit={handleTextSubmit}>
-          <textarea
-            id="job-desc-submit"
-            value={textInput}
-            onChange={(e) => setTextInput(e.target.value)}
-            placeholder="Copy and paste job description/posting below, then hit 'Submit Text'!"/> 
-          <button id="submit-text-button" type="submit" className="custom-button">
-            Submit Text
-          </button>
-        </form>
-
-        {/* Questions */}
-        <div>
-          <label className="question-label">Practice Questions</label>
-          {questions ? (
-            <div className="question-text">
-              {questionResponse()}
-            </div>
-          ) : (<div className='centered-container'>
-                  <div id='questions-box'>
-                    No questions available. Submit a  job posting to receive practice questions.
+          {/* Questions */}
+          <div>
+            <label className="question-label">Practice Questions</label>
+            {questions ? (
+              <div className="question-text">
+                {questionResponse()}
+              </div>
+            ) : (<div className='centered-container'>
+                    <div id='questions-box'>
+                      No questions available. Submit a  job posting to receive practice questions.
+                    </div>
                   </div>
-                </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
 
@@ -154,6 +157,12 @@ function DefaultPage() {
           style={{ display: 'none' }}
           onChange={handleFileChange}
         />
+
+        <div id="instructions">
+          After generating the practice questions, record your response with a <br/>
+          device of choice and upload the .mp3 file below. Then, view your feedback!
+        </div>
+
         <div id="browse-upload">
           {/* Browse */}
           <button type="button" id="browse-button" onClick={handleButtonClick}>
@@ -167,7 +176,7 @@ function DefaultPage() {
 
       {/* Feedback Container */}
       <div className="feedback-container" style={{ marginTop: '20px' }}>
-        <label className="feedback-label" style={{ fontWeight: 'bold' }}>Feedback</label>
+        <label className="feedback-title" style={{ fontWeight: 'bold' }}>Feedback</label>
         {response ? (
           <div className="feedback-text" style={{ marginTop: '10px' }}>
             {renderResponse()}
@@ -179,6 +188,7 @@ function DefaultPage() {
             value="No feedback available."/>
         )}
       </div>
+      
     </div>
   );
 }
