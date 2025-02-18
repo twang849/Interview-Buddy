@@ -82,9 +82,9 @@ function DefaultPage() {
       <div>
         <h2>Analysis Result:</h2>
         <h3>Tips:</h3>
-        <ul style={{ textAlign: 'justify', lineHeight: '1.5' }}>
+        <ul id="tips" >
           {response.feedback.tips.map((tip, index) => (
-            <li key={index}>{tip}</li>
+            <li key={index}>{tip} style={{}}</li>
           ))}
         </ul>
         <h3>Transcription:</h3>
@@ -101,8 +101,7 @@ function DefaultPage() {
     if (!questions) return null;
 
     return (
-      <div className='transcript-box' style={{width:'1000px'
-      }}>
+      <div className='question-container'>
         <ul style={{ textAlign: 'justify', lineHeight: '1.5' }}>
           {questions.questions.map((tip, index) => (
             <li key={index} className='list-item'>{tip}</li>
@@ -119,7 +118,7 @@ function DefaultPage() {
 
       <div id="questions-and-desc">
         {/* Job Description Submission */}
-        <form id="submit-form" onSubmit={handleTextSubmit}>
+        <form id="job-desc-container" onSubmit={handleTextSubmit}>
           <textarea
             id="job-desc-submit"
             value={textInput}
@@ -131,16 +130,15 @@ function DefaultPage() {
         </form>
 
         {/* Questions */}
-        <div className="question-container" style={{ marginTop: '20px' }}>
-          <label className="question-label" style={{ fontWeight: 'bold' }}>Practice Questions</label>
+        <div>
+          <label className="question-label">Practice Questions</label>
           {questions ? (
-            <div className="question-text" style={{ marginTop: '10px', backgroundColor:'white' }}>
+            <div className="question-text">
               {questionResponse()}
             </div>
           ) : (<div className='centered-container'>
                   <div id='questions-box'>
-                    <br></br>
-                    No questions available. Submit job posting above to receive practice questions.
+                    No questions available. Submit a  job posting to receive practice questions.
                   </div>
                 </div>
           )}

@@ -1,20 +1,17 @@
-Can you elaborate on your experience with data engineering and analytics functions?
-How have you used Azure services, such as Synapse, Data Factory, or Delta Lake, in your previous roles?
-Describe your proficiency with SQL and how you have utilized it for data extraction, transformation, and loading processes.
-What role have programming languages like Python played in your data analysis or engineering projects?
-How have you used Power BI and/or other Business Intelligence tools in creating operational or management reports?
-Can you provide an example of when you gathered and documented business requirements for a project?
-How do you approach the coordination and tracking of project deliverables?
-What strategies do you use to ensure data integrity and quality during data profiling and source-to-target mapping?
-Discuss a time when you defined and developed business and technical requirements in collaboration with stakeholders.
-How do you maintain and enhance data marts in collaboration with IT, particularly through incident and defect management processes?
-Describe your approach to validating data and ensuring its quality in Centralized Data Store environments.
-Can you discuss a process you have improved through automation to increase efficiency?
-What is your method for creating and maintaining end-user documentation and reference guides?
-How have you supported Business Analysts in compiling data and ensuring its validity and accuracy?
-Share an example of a key project you have participated in. How did you contribute to its success?
-What is your approach to developing briefing and presentation materials for management?
-How do you handle data requests from both internal and external clients?
-Explain your experience with statistical methodologies and measurements in data analysis contexts.
-Describe how you have managed multiple data sources when building data requirements and writing programs/queries.
-How have you contributed to Branch projects, and what was your role in forums and working groups?
+Can you describe your experience with designing and developing customized data sets or dashboards?  
+How proficient are you with Azure services such as Synapse, Data Factory, or Delta Lake?  
+What experience do you have with SQL, Python, Power BI, R, or SAS in data extraction and analysis?  
+Can you provide an example of a project where you successfully merged and analyzed data from multiple sources?  
+How do you approach gathering and documenting business requirements?  
+Describe a time when you coordinated and tracked project deliverables in a complex project.  
+What strategies do you use to ensure the quality and integrity of data in a data warehouse?  
+Can you discuss a situation where you had to provide technical support for databases or data marts?  
+How do you prioritize and execute data requests from internal and external clients?  
+What techniques do you use for data profiling and ensuring data integrity during source-to-target mapping?  
+Describe your experience in collaborating with both business and IT teams on data-related projects.  
+How do you handle the process of incident and defect management within data marts?  
+Provide an example of how you've used process maps or user guides to improve internal processes and efficiency.  
+How do you maintain and update comprehensive end-user documentation and reference materials?  
+What methods do you use to validate data accuracy and ensure it supports decision-making effectively?  
+Can you share an experience where you participated in a key project or working group? What was your role?  
+How do you ensure continuous learning and professional growth in your data engineering career?
