@@ -1,15 +1,14 @@
 * {
   font-family: monospace;
+  background-color: black;
 }
 
 .DefaultPage {
   max-height: 100vh;
-  /* max-width: 100vh; */
   text-align: center;
   overflow: visible;
-  /* display: flex;
-  flex-wrap: wrap; */
 }
+
 
 body {
   max-height: 100vh;
@@ -53,8 +52,21 @@ code {
   resize:none;
 }
 
+.file-input {
+  display: none;
+}
+
+#browse-upload {
+  width: 250px;
+  /* height: 80px; */
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: baseline;
+}
+
 #upload-button {
-  padding: 0px 10px;
+  padding: 10px 20px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -68,10 +80,6 @@ code {
   background-color: #c0c0c0;
 }
 
-.file-input {
-  display: none;
-}
-
 #browse-button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -81,7 +89,6 @@ code {
   font-size: 16px;
   border-radius: 15px;
   transition-duration: 0.4s;
-
 }
 #browse-button:hover {
   background-color: gray;
@@ -171,7 +178,7 @@ code {
 }
 
 .question-container {
-  overflow: scroll;
+  overflow-y: auto;
   margin-top: 20px;
   width: 450px;
   height: 450px;
@@ -230,14 +237,6 @@ code {
   font-size: 16px;
   border-radius: 15px;
   margin-top: 20px;
-}
-
-#browse-upload {
-  width: 250px;
-  height: 50px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
 }
 
 .list-item {
