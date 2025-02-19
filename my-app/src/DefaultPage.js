@@ -101,22 +101,21 @@ function DefaultPage() {
     if (!questions) return null;
 
     return (
-      <div className='question-container'>
-        <ul style={{ textAlign: 'justify', lineHeight: '1.5' }}>
+        <ul id="question-list">
           {questions.questions.map((tip, index) => (
             <li key={index} className='list-item'>{tip}</li>
           ))}
         </ul>
-      </div>
     );
   };
 
   return (
-    <div className='DefaultPage'>
+    <div>
       <div id="title-box">
         <h1 id="title"> InterviewBuddy</h1>
-        {error && <p className="error" style={{ color: 'red'}}>{error}</p>}
       </div>
+    <div className='DefaultPage'>
+      {error && <p className="error">{error}</p>}
       <div id="flex-helper">
         <div id="questions-and-desc">
           {/* Job Description Submission */}
@@ -135,11 +134,11 @@ function DefaultPage() {
           <div>
             <label className="question-label">Practice Questions</label>
             {questions ? (
-              <div className="question-text">
+              <div className="questions-box" style={{color:'black'}}>
                 {questionResponse()}
               </div>
             ) : (<div className='centered-container'>
-                    <div id='questions-box'>
+                    <div className='questions-box'>
                       No questions available. Submit a  job posting to receive practice questions.
                     </div>
                   </div>
@@ -175,10 +174,10 @@ function DefaultPage() {
       </form>
 
       {/* Feedback Container */}
-      <div className="feedback-container" style={{ marginTop: '20px' }}>
-        <label className="feedback-title" style={{ fontWeight: 'bold' }}>Feedback</label>
+      <div className="feedback-container">
+        <label className="feedback-title">Feedback</label>
         {response ? (
-          <div className="feedback-text" style={{ marginTop: '10px' }}>
+          <div className="feedback-text">
             {renderResponse()}
           </div>
         ) : (
@@ -189,6 +188,7 @@ function DefaultPage() {
         )}
       </div>
       
+    </div>
     </div>
   );
 }

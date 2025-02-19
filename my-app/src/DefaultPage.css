@@ -43,6 +43,7 @@ code {
 .feedback-title {
   font-size: 18px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .file-input {
@@ -51,11 +52,11 @@ code {
 
 #browse-upload {
   width: 250px;
-  /* height: 80px; */
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   align-items: baseline;
+  margin-bottom: 30px;
 }
 
 #upload-button {
@@ -101,6 +102,8 @@ code {
 .DefaultPage .error {
   color: red;
   margin-top: 10px;
+  font-weight: bold;
+  font-size: x-large;
 }
 
 .custom-button {
@@ -111,7 +114,7 @@ code {
   cursor: pointer;
   font-size: 16px;
   border-radius: 15px;
-  margin-top: 10px; /* Add some margin for spacing */
+  margin-top: 10px;
 }
 
 .custom-button:hover {
@@ -148,8 +151,8 @@ code {
 }
 
 .transcript-box {
-  max-height: 300px; /* Set a fixed height */
-  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 300px;
+  overflow-y: auto; 
   border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
@@ -161,20 +164,9 @@ code {
   line-height: 1.2;
 }
 
-.question-text {
-  margin-top: 10px;
-}
-
 .question-label {
   font-size: 30px;
   font-weight: bold;
-}
-
-.question-container {
-  overflow-y: auto;
-  margin-top: 20px;
-  width: 450px;
-  height: 450px;
 }
 
 .centered-container {
@@ -185,7 +177,8 @@ code {
   overflow-y: auto;
 }
 
-#questions-box {
+.questions-box {
+  color: rgb(0,0,0,0.5);
   background-color: white;
   resize: none;
   width: 450px;
@@ -195,6 +188,7 @@ code {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-top: 10px;
+  overflow-y: auto;
 }
 
 #browse-button {
@@ -222,6 +216,11 @@ code {
   border-radius: 5px;
 }
 
+#job-desc-submit:focus {
+  outline-color: lightgray;
+  outline-offset: 0px;
+}
+
 #submit-text-button {
   padding: 10px 20px;
   color: white;
@@ -240,6 +239,14 @@ code {
   margin-left: 0px;
 }
 
+#question-list {
+  text-align: justify;
+  line-height: 1.5; 
+  margin-top: 10px;
+  position: relative;
+  left: 0%;
+}
+
 #questions-and-desc {
   display: flex;
   flex-direction: row;
@@ -247,7 +254,8 @@ code {
 
 #title-box {
   background-color: slategray;
-  /* width: 2000px; */
+  text-align: center;
+  margin-top: 165px;
 }
 
 #flex-helper {
@@ -259,4 +267,11 @@ code {
   color: #333;
   font-size: 70px;
   padding: 10px;
+}
+
+
+#instructions {
+  margin-top: 40px;
+  /* margin-bottom: 40px; */
+  font-size: 20px;
 }
