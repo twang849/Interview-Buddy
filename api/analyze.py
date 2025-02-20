@@ -14,6 +14,7 @@ load_dotenv()
 DG_API_KEY = os.getenv("DG_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
+# Function for use when accounts have been implemented
 def retrieve_audio(host, db_name, file, write_path="temp.mp3"):
     client = MongoClient(host)
     db = client[db_name]
@@ -22,15 +23,16 @@ def retrieve_audio(host, db_name, file, write_path="temp.mp3"):
     with open(write_path, 'wb') as f:
         f.write(audio_file.read())
 
-def analyze_audio(filename):
+def deepgramAnalysis(filename):
     try:
         deepgram = DeepgramClient(DG_API_KEY)
         with open(filename, "rb") as file:
-            buffer_data = file.read()
+            savedAudio = file.read()
 
         payload: FileSource = {
-            "buffer": buffer_data,
+            "buffer": savedAudio,
         }
+
         options = PrerecordedOptions(
             model="nova-2",
             sentiment=True,
@@ -54,14 +56,15 @@ def parse_json(json_data):
     except (KeyError, TypeError) as e:
         return str(e)
 
-def analyze_transcript(filename, mode="interview", transcript_only=False):
-    res = analyze_audio(filename)
+# Retrieve transcripted dialogue from the interview
+def parseTranscript(filename, mode="interview"):
+    res = deepgramAnalysis(filename)
     parse = parse_json(res)
     max_tries = 2
     while (parse == "Low confidence"):
         if max_tries <= 0:
             break
-        res = analyze_audio(filename)
+        res = deepgramAnalysis(filename)
         parse = parse_json(res)
         max_tries -= 1
 
@@ -80,13 +83,7 @@ def analyze_transcript(filename, mode="interview", transcript_only=False):
     pauses = [paragraphs[i+1]["start"] - paragraphs[i]["end"] for i in range(len(paragraphs) - 1)]
     # pauses = [i - i % 0.01 for i in pauses]
 
-    prompt_modes = {
-        "interview" : "Analyze how the interview went, given the following transcript.\n"
-    }
-    if transcript_only:
-        return prompt_modes[mode] + transcript
     processed = ""
-    
     for i in range(len(paragraphs) - 1):
         processed += "Speaker " + str(paragraphs[i]["speaker"]) + ": "
         processed += paragraphs[i]["text"]
@@ -96,13 +93,16 @@ def analyze_transcript(filename, mode="interview", transcript_only=False):
                 processed += " (pause for " + "{:.2f}".format(pauses[i]) + " seconds) "
         processed += "\n"
 
-    return prompt_modes[mode] + processed
+    return processed
 
 def llm(prompt, context, questions=False):
     client = OpenAI()
+
     msg = [
-            {"role": "developer", "content": context},
             {
+                "role": "developer", 
+                "content": context
+            },{
                 "role": "user",
                 "content": prompt
             }
@@ -114,6 +114,7 @@ def llm(prompt, context, questions=False):
                 "content": "I will be answering the following questions:\n" + questions
             }
         )
+
     completion = client.chat.completions.create(
         model="gpt-4o",
         messages=msg
@@ -121,6 +122,7 @@ def llm(prompt, context, questions=False):
     return completion.choices[0].message.content
 
 def generate_questions(job_description, context="You are a recruiter for a company that is hiring for a new position.\n\
+                        You will receive a copy of a job description posting.\
                         You need to generate questions to ask candidates during the interview process.\n\
                         Write a list of questions that you would ask the candidates, testing keywords from the job description.\n\
                         The questions should start with a dash and a space before each question, like this:\n\
@@ -184,25 +186,31 @@ def short_form_questions(prompt, questions, context="You give feedback on interv
         return []
 
 def main(filename):
-    prompt = analyze_transcript(filename)
-    print(prompt)
+    interviewTranscript = parseTranscript(filename)
+    # print(prompt)
+
     longform = long_form(prompt)
-    print(longform)
+    # print(longform)
+
     shortform = short_form(prompt)
-    print(shortform)
-    result = {"transcript": prompt, "long_form": longform, "short_form": shortform}
+    # print(shortform)
+
+    result = {"transcript": interviewTranscript, "long_form": longform, "short_form": shortform}
     return result
 
 def main_questions(filename):
     with open("questions.txt", "r") as f:
         questions = f.read()
-    prompt = analyze_transcript(filename)
-    print(prompt)
-    longform = long_form_questions(prompt, questions)
-    print(longform)
-    shortform = short_form_questions(prompt, questions)
-    print(shortform)
-    result = {"transcript": prompt, "questions": questions, "long_form": longform, "short_form": shortform}
+
+    interviewTranscript = parseTranscript(filename)
+    # print(interviewTranscript)
+
+    longform = long_form_questions(interviewTranscript, questions)
+    # print(longform)
+
+    shortform = short_form_questions(interviewTranscript, questions)
+    # print(shortform)
+    result = {"transcript": interviewTranscript, "questions": questions, "long_form": longform, "short_form": shortform}
     return result
 
 if __name__ == "__main__":

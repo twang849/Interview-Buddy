@@ -1,10 +1,14 @@
-What experience do you have with Python programming?
-Can you give us an example of a project where you used Python to solve a problem or create an application?
-How do you approach debugging a Python program? Can you walk us through your process?
-Are you familiar with any Python libraries or frameworks? Which ones have you used and how did they assist you in your projects?
-How do you handle version control in your Python projects?
-What is your experience with QBasic, and how have you applied it in your previous roles?
-Can you describe a situation where you used QBasic to enhance or streamline a task?
-How do you stay updated on the latest updates or trends in programming languages like Python or QBasic?
-Have you ever integrated Python with other programming languages or technologies? If so, can you describe the project and the outcome?
-What challenges have you faced when working with QBasic, and how did you overcome them?
+Can you describe your experience with designing and developing customized data sets and dashboards using BI tools like Power BI?
+How do you approach gathering and documenting business requirements?
+What experience do you have with Azure services such as Synapse, Data Factory, or Delta Lake in data engineering tasks?
+Can you provide an example of a project where you coordinated and tracked project deliverables effectively?
+How have you used SQL, Python, R, or SAS in past projects to analyze and merge data from various sources?
+Describe your process for ensuring data integrity and quality during data profiling and source-to-target mapping.
+What methodologies do you use in defining, documenting, and leveraging metadata for business values?
+Can you discuss a time when you collaborated with IT and business teams to support data marts or handle change requests?
+How do you ensure data quality and accuracy in centralized data stores?
+What strategies do you employ to maintain and improve internal processes, identify automation opportunities, and increase efficiency?
+Explain your approach to developing and maintaining comprehensive end-user documentation and reference materials.
+Share an experience where you assisted in a key project or initiative by gathering and writing requirements and creating project plans.
+How do you handle unexpected data requests from internal or external clients effectively?
+Describe your experience supporting decision-making through the compilation and validation of business performance data.

@@ -18,7 +18,7 @@ function DefaultPage() {
   };
 
   // Function for handling file upload
-  const handleSubmit = async (event) => {
+  const uploadFile = async (event) => {
     event.preventDefault();
     const formData = new FormData();
     if (!file) {
@@ -40,6 +40,7 @@ function DefaultPage() {
 
       const data = await res.json();
       setResponse(data);
+
     } catch (error) {
       console.error("Error during upload:", error);
       setError("Failed to upload file. Please try again or check the server.");
@@ -47,10 +48,11 @@ function DefaultPage() {
   };
 
   // Function for question generation from job description
-  const handleTextSubmit = async (event) => {
+  const generateQuestions = async (event) => {
     event.preventDefault();
+
     try {
-      const res = await fetch("http://127.0.0.1:4000/analyze-text", {
+      const res = await fetch("http://127.0.0.1:4000/generate-questions", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
@@ -72,32 +74,32 @@ function DefaultPage() {
     }
   };
 
-  const renderResponse = () => {
+  const renderFeedback = () => {
     if (!response) return null;
-
-    // Split the transcript into segments based on "Speaker"
-    const segments = response.feedback.transcription.split(/(?=Speaker)/g);
 
     return (
       <div>
-        <h2>Analysis Result:</h2>
-        <h3>Tips:</h3>
-        <ul id="tips" >
-          {response.feedback.tips.map((tip, index) => (
-            <li key={index}>{tip} style={{}}</li>
-          ))}
-        </ul>
-        <h3>Transcription:</h3>
-        <div className="transcript-box" style={{textAlign: 'justify', lineHeight: 0}}>
-          {segments.map((segment, index) => (
-            <p key={index}>{segment.trim()}</p>
-          ))}
-        </div>
+        {response && response.feedback.tips.map((tip, index) => (
+          <li key={index}>{tip}</li>
+        ))}
       </div>
     );
-  };
+  }
+  
+  const renderTranscript = () => {
+    if (!response) return null;
+    const segments = response.feedback.transcription.split(/(?=Speaker)/)
 
-  const questionResponse = () => {
+    return (
+      <div>
+        {response && segments.map((segment, index) => (
+          <p key={index}>{segment.trim()}</p>
+        ))}
+      </div>
+    );
+  }
+
+  const renderQuestions = () => {
     if (!questions) return null;
 
     return (
@@ -111,15 +113,21 @@ function DefaultPage() {
 
   return (
     <div>
+      <title>InterviewBuddy</title>
+
       <div id="title-box">
         <h1 id="title"> InterviewBuddy</h1>
+        <h3>Interview Buddy is a web-based platform that helps users improve their 
+            interview skills through unlimited, personalized practice.</h3>
       </div>
+      
     <div className='DefaultPage'>
       {error && <p className="error">{error}</p>}
       <div id="flex-helper">
         <div id="questions-and-desc">
+
           {/* Job Description Submission */}
-          <form id="job-desc-container" onSubmit={handleTextSubmit}>
+          <form id="job-desc-container" onSubmit={generateQuestions}>
             <textarea
               id="job-desc-submit"
               value={textInput}
@@ -135,7 +143,7 @@ function DefaultPage() {
             <label className="question-label">Practice Questions</label>
             {questions ? (
               <div className="questions-box" style={{color:'black'}}>
-                {questionResponse()}
+                {renderQuestions()}
               </div>
             ) : (<div className='centered-container'>
                     <div className='questions-box'>
@@ -148,12 +156,11 @@ function DefaultPage() {
       </div>
 
       {/* Browse Files and Upload Button */}
-      <form onSubmit={handleSubmit} >
+      <form onSubmit={uploadFile} >
         <input
           type="file"
           id="fileInput"
           className="file-input"
-          style={{ display: 'none' }}
           onChange={handleFileChange}
         />
 
@@ -173,22 +180,31 @@ function DefaultPage() {
         </div>
       </form>
 
-      {/* Feedback Container */}
-      <div className="feedback-container">
-        <label className="feedback-title">Feedback</label>
-        {response ? (
-          <div className="feedback-text">
-            {renderResponse()}
+      {/* Feedback and Transcript */}
+        <div className="feedback-text">
+          <h1>Analysis Result</h1>
+
+          {/* Feedback */}
+          <div id='feedback-transcript-box'>
+            <div>
+              <h2>Feedback</h2>
+              <ul id="tips" className='questions-box'>
+                {renderFeedback()}
+              </ul>
+            </div>
+            
+            {/* Transcript */}
+            <div>
+              <h2>Transcript</h2>
+              <div className="questions-box" style={{textAlign: 'justify', color: 'black'}}>
+                {renderTranscript()}
+             </div>
+            </div>
           </div>
-        ) : (
-          <textarea
-            id="feedback"
-            readOnly
-            value="No feedback available."/>
-        )}
-      </div>
+        </div>
+        
       
-    </div>
+      </div>
     </div>
   );
 }

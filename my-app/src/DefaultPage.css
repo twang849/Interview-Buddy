@@ -83,6 +83,7 @@ code {
   font-size: 16px;
   border-radius: 15px;
   transition-duration: 0.4s;
+  margin-right: 20px;
 }
 #browse-button:hover {
   background-color: gray;
@@ -125,6 +126,12 @@ code {
   display: none;
 }
 
+#feedback-transcript-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .feedback-container {
   margin-top: 20px;
 }
@@ -145,9 +152,14 @@ code {
 }
 
 #tips {
-  text-align: justify;
+  text-align: left;
   line-height: 1.5;
-  width: 900px;
+  width: 450px;
+  margin-right: 40px;
+  margin-top: 10px;
+  height: 450px;
+  background-color: white;
+  color: black;
 }
 
 .transcript-box {
@@ -256,6 +268,8 @@ code {
   background-color: slategray;
   text-align: center;
   margin-top: 165px;
+  padding: 100px 0px 5px;
+  margin-bottom: 50px;
 }
 
 #flex-helper {
@@ -268,7 +282,6 @@ code {
   font-size: 70px;
   padding: 10px;
 }
-
 
 #instructions {
   margin-top: 40px;
