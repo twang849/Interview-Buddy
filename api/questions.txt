@@ -1,12 +1,10 @@
-What attracts you to working at REI, and how do you resonate with our mission to inspire outdoor enthusiasm?
-Can you describe a time when you've gone above and beyond to provide exceptional customer service?
-How would you assist a customer who is unsure about what outdoor product they need?
-Describe a situation where you had to actively listen to understand a customer's needs. How did you ensure they felt supported?
-How do you handle collaboration within a team to enhance the in-store customer experience?
-What strategies do you use to build strong relationships with customers and understand their preferences?
-Give an example of how you have dealt with a challenging customer issue and what problem-solving skills you applied.
-Can you discuss a time when you contributed ideas at your workplace that helped align with the company's mission or objectives?
-How do you manage feedback and adapt your approach when facing workplace challenges?
-What does a growth mindset mean to you, and how do you apply it in a professional setting?
-Why are you passionate about the outdoors, and how do you integrate that passion into your work environment?
-How do you balance professionalism with creating a welcoming and comfortable environment for customers?
+What experience do you have with Python programming?
+Can you give us an example of a project where you used Python to solve a problem or create an application?
+How do you approach debugging a Python program? Can you walk us through your process?
+Are you familiar with any Python libraries or frameworks? Which ones have you used and how did they assist you in your projects?
+How do you handle version control in your Python projects?
+What is your experience with QBasic, and how have you applied it in your previous roles?
+Can you describe a situation where you used QBasic to enhance or streamline a task?
+How do you stay updated on the latest updates or trends in programming languages like Python or QBasic?
+Have you ever integrated Python with other programming languages or technologies? If so, can you describe the project and the outcome?
+What challenges have you faced when working with QBasic, and how did you overcome them?

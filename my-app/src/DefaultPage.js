@@ -6,8 +6,9 @@ function DefaultPage() {
   const [response, setResponse] = useState(null);
   const [questions, setQuestions] = useState(null);
   const [error, setError] = useState(null);
-  const [textInput, setTextInput] = useState(''); // Define the textInput state variable
+  const [textInput, setTextInput] = useState('');
 
+  // Helper method for uploading file
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
@@ -16,6 +17,7 @@ function DefaultPage() {
     document.getElementById('fileInput').click();
   };
 
+  // Function for handling file upload
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -32,7 +34,7 @@ function DefaultPage() {
       });
 
       if (!res.ok) {
-        const errorText = await res.text(); // Capture error message from the backend
+        const errorText = await res.text(); 
         throw new Error(`Server error: ${errorText}`);
       }
 
@@ -44,6 +46,7 @@ function DefaultPage() {
     }
   };
 
+  // Function for question generation from job description
   const handleTextSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -56,12 +59,13 @@ function DefaultPage() {
       });
 
       if (!res.ok) {
-        const errorText = await res.text(); // Capture error message from the backend
+        const errorText = await res.text(); 
         throw new Error(`Server error: ${errorText}`);
       }
 
       const data = await res.json();
       setQuestions(data);
+
     } catch (error) {
       console.error("Error during text submission:", error);
       setError("Failed to submit text. Please try again or check the server.");
@@ -78,9 +82,9 @@ function DefaultPage() {
       <div>
         <h2>Analysis Result:</h2>
         <h3>Tips:</h3>
-        <ul style={{ textAlign: 'justify', lineHeight: '1.5' }}>
+        <ul id="tips" >
           {response.feedback.tips.map((tip, index) => (
-            <li key={index}>{tip}</li>
+            <li key={index}>{tip} style={{}}</li>
           ))}
         </ul>
         <h3>Transcription:</h3>
@@ -97,58 +101,54 @@ function DefaultPage() {
     if (!questions) return null;
 
     return (
-      <div>
-        <h2>Questions to practice:</h2>
-        {/* <h3>Tips:</h3> */}
-        <ul style={{ textAlign: 'justify', lineHeight: '1.5' }}>
+        <ul id="question-list">
           {questions.questions.map((tip, index) => (
-            <li key={index}>{tip}</li>
+            <li key={index} className='list-item'>{tip}</li>
           ))}
         </ul>
-        {/* <h3>Transcription:</h3> */}
-        {/* <div className="transcript-box" style={{textAlign: 'justify', lineHeight: 0}}>
-          {segments.map((segment, index) => (
-            <p key={index}>{segment.trim()}</p>
-          ))}
-        </div> */}
-      </div>
     );
   };
 
   return (
-    <div className="DefaultPage">
-      <h1 style={{ color: '#333' }}>InterviewBuddy</h1>
+    <div>
+      <div id="title-box">
+        <h1 id="title"> InterviewBuddy</h1>
+      </div>
+    <div className='DefaultPage'>
+      {error && <p className="error">{error}</p>}
+      <div id="flex-helper">
+        <div id="questions-and-desc">
+          {/* Job Description Submission */}
+          <form id="job-desc-container" onSubmit={handleTextSubmit}>
+            <textarea
+              id="job-desc-submit"
+              value={textInput}
+              onChange={(e) => setTextInput(e.target.value)}
+              placeholder="Copy and paste job description/posting below, then hit 'Submit Text'!"/> 
+            <button id="submit-text-button" type="submit" className="custom-button">
+              Submit Text
+            </button>
+          </form>
 
-      <form onSubmit={handleTextSubmit} style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <textarea
-          value={textInput}
-          onChange={(e) => setTextInput(e.target.value)}
-          placeholder="Copy and paste job description/posting below, then hit 'Submit Text'!"
-          style={{ width: '300px', height: '150px', padding: '10px', fontSize: '16px', border: '1px solid #ccc', borderRadius: '5px', marginTop: '10px' }}
-        />
-        <button type="submit" className="custom-button" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', cursor: 'pointer', fontSize: '16px', borderRadius: '15px', marginTop: '10px' }}>
-          Submit Text
-        </button>
-      </form>
-
-      <div className="question-container" style={{ marginTop: '20px' }}>
-        <label className="question-label" style={{ fontWeight: 'bold' }}>Practice Questions</label>
-        {error && <p className="error" style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
-        {questions ? (
-          <div className="question-text" style={{ marginLeft: '100px', marginTop: '10px' }}>
-            {questionResponse()}
+          {/* Questions */}
+          <div>
+            <label className="question-label">Practice Questions</label>
+            {questions ? (
+              <div className="questions-box" style={{color:'black'}}>
+                {questionResponse()}
+              </div>
+            ) : (<div className='centered-container'>
+                    <div className='questions-box'>
+                      No questions available. Submit a  job posting to receive practice questions.
+                    </div>
+                  </div>
+            )}
           </div>
-        ) : (
-          <textarea
-            id="question"
-            readOnly
-            value="No questions available."
-            style={{ resize: 'none', width: '100%', height: '100px' }}
-          />
-        )}
+        </div>
       </div>
 
-      <form onSubmit={handleSubmit} style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      {/* Browse Files and Upload Button */}
+      <form onSubmit={handleSubmit} >
         <input
           type="file"
           id="fileInput"
@@ -156,28 +156,39 @@ function DefaultPage() {
           style={{ display: 'none' }}
           onChange={handleFileChange}
         />
-        <button type="button" className="custom-button" onClick={handleButtonClick} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', cursor: 'pointer', fontSize: '16px', borderRadius: '15px', marginTop: '10px' }}>
-          {file ? file.name : "Browse"}
-        </button>
-        <input id="submit-button" type="submit" value="Upload" style={{ borderRadius: '10px', padding: '5px', marginTop: '10px' }} />
+
+        <div id="instructions">
+          After generating the practice questions, record your response with a <br/>
+          device of choice and upload the .mp3 file below. Then, view your feedback!
+        </div>
+
+        <div id="browse-upload">
+          {/* Browse */}
+          <button type="button" id="browse-button" onClick={handleButtonClick}>
+            {file ? file.name : "Browse"}
+          </button>
+
+          {/* Upload */}
+          <input id="upload-button" type="submit" value="Upload"/>
+        </div>
       </form>
 
-      <div className="feedback-container" style={{ marginTop: '20px' }}>
-        <label className="feedback-label" style={{ fontWeight: 'bold' }}>Feedback</label>
-        {error && <p className="error" style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
+      {/* Feedback Container */}
+      <div className="feedback-container">
+        <label className="feedback-title">Feedback</label>
         {response ? (
-          <div className="feedback-text" style={{ marginTop: '10px' }}>
+          <div className="feedback-text">
             {renderResponse()}
           </div>
         ) : (
           <textarea
             id="feedback"
             readOnly
-            value="No feedback available."
-            style={{ resize: 'none', width: '100%', height: '100px' }}
-          />
+            value="No feedback available."/>
         )}
       </div>
+      
+    </div>
     </div>
   );
 }
