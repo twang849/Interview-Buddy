@@ -20,6 +20,7 @@ function DefaultPage() {
   // Function for handling file upload
   const uploadFile = async (event) => {
     event.preventDefault();
+    
     const formData = new FormData();
     if (!file) {
       setError("Please select a file before uploading.");
@@ -79,7 +80,7 @@ function DefaultPage() {
 
     return (
       <div>
-        {response && response.feedback.tips.map((tip, index) => (
+        {response.feedback.tips.map((tip, index) => (
           <li key={index}>{tip}</li>
         ))}
       </div>
@@ -92,7 +93,7 @@ function DefaultPage() {
 
     return (
       <div>
-        {response && segments.map((segment, index) => (
+        {segments.map((segment, index) => (
           <p key={index}>{segment.trim()}</p>
         ))}
       </div>

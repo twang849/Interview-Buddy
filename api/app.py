@@ -23,11 +23,13 @@ def upload_file():
     try:
         file.save(file_path)
 
-        out = analyze.main_questions(file_path)
+        output = analyze.main(file_path)
+        # print(output["short_form"])
+
         feedback = {
-            "transcription": out["transcript"],
+            "transcription": output["transcript"],
             "tips": [
-                i["feedback"] for i in out["short_form"]
+                i["feedback"] for i in output["short_form"]
             ]
         }
 
