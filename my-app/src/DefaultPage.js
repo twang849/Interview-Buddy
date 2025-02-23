@@ -122,7 +122,7 @@ function DefaultPage() {
 
     <div id="subtitle">Interview Buddy is a web-based platform that helps users improve 
         <br/>
-        their interview skills through unlimited, personalized practice.
+        their interview skills through generated practice questions and feedback.
         <br/>
         <br/>
         Copy and paste job description/posting below, then hit 'Submit Text'!"
@@ -206,9 +206,6 @@ function DefaultPage() {
              </div>
             </div>
           </div>
-
-        
-      
       </div>
     </div>
   );

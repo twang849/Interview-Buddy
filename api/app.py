@@ -54,6 +54,7 @@ def generate_questions():
         questions = questions.split("\n")
         questions = [q[2:] for q in questions if q.startswith("- ")]
 
+        # Use when need to store questions
         with open("questions.txt", "w") as f:
             f.write("\n".join(questions))
             

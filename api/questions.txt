@@ -1,14 +1,15 @@
-Can you describe your experience with designing and developing customized data sets and dashboards using BI tools like Power BI?
-How do you approach gathering and documenting business requirements?
-What experience do you have with Azure services such as Synapse, Data Factory, or Delta Lake in data engineering tasks?
-Can you provide an example of a project where you coordinated and tracked project deliverables effectively?
-How have you used SQL, Python, R, or SAS in past projects to analyze and merge data from various sources?
-Describe your process for ensuring data integrity and quality during data profiling and source-to-target mapping.
-What methodologies do you use in defining, documenting, and leveraging metadata for business values?
-Can you discuss a time when you collaborated with IT and business teams to support data marts or handle change requests?
-How do you ensure data quality and accuracy in centralized data stores?
-What strategies do you employ to maintain and improve internal processes, identify automation opportunities, and increase efficiency?
-Explain your approach to developing and maintaining comprehensive end-user documentation and reference materials.
-Share an experience where you assisted in a key project or initiative by gathering and writing requirements and creating project plans.
-How do you handle unexpected data requests from internal or external clients effectively?
-Describe your experience supporting decision-making through the compilation and validation of business performance data.
+What experience do you have with designing and developing customized data sets and reports using programming languages and BI tools?
+Can you explain your process for gathering and documenting business requirements for data engineering projects?
+How have you utilized Azure services such as Synapse, Data Factory, or Delta Lake in previous roles?
+Could you describe a complex data profiling or mapping project you've worked on and the outcomes you achieved?
+How do you ensure data integrity and quality when analyzing and developing data sets?
+Describe your experience with SQL, Python, Power BI, R, or SAS in merging and analyzing data from various sources.
+How have you collaborated with both business and IT teams to enhance the utilization of data marts?
+What steps do you take to validate the accuracy of data before it is released to stakeholders?
+Can you provide an example of how you've improved internal data processes or increased automation efficiencies in the past?
+How do you develop and maintain comprehensive end-user documentation and ensure it stays up-to-date?
+What is your approach to resolving data incidents or defects through scheduled release processes?
+Describe your experience in defining and developing business and technical requirements for data products.
+How do you assist in creating briefing and presentation materials for management?
+Can you share a time when you had to work on a project with varying scope and complexity, such as gathering requirements and creating progress reports?
+Why are you interested in working with the Workplace Safety and Insurance Board, and how can you contribute to its mission?
