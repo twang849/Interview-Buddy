@@ -1,0 +1,104 @@
+{
+    "transcript": "\nSpeaker 0: Hi. Hi. I'm Bobby Frazier for the interview. Okay. Hi.\n\nI'm Stephanie. Nice to meet you. Have a seat, please. Thank you. Well, Bobby, uh, what time did you think your interview was today?\n\nWell, I I got up late because, uh, some guys were at the house and, uh, we were watching football last night. And then I think my watch battery died and so I stopped and got some breakfast this morning and Oh, okay. And then my car broke down and so I'm running a little bit late. Oh, okay. Uh, did you call?",
+    "paragraphs": [
+        {
+            "sentences": [
+                {
+                    "text": "Hi.",
+                    "start": 1.52,
+                    "end": 2.0
+                },
+                {
+                    "text": "Hi.",
+                    "start": 2.0,
+                    "end": 2.1599998
+                },
+                {
+                    "text": "I'm Bobby Frazier for the interview.",
+                    "start": 2.1599998,
+                    "end": 3.9399998
+                },
+                {
+                    "text": "Okay.",
+                    "start": 4.0,
+                    "end": 4.5
+                },
+                {
+                    "text": "Hi.",
+                    "start": 5.7599998,
+                    "end": 6.0
+                }
+            ],
+            "start": 1.52,
+            "end": 6.0,
+            "num_words": 10,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "I'm Stephanie.",
+                    "start": 6.0,
+                    "end": 6.64
+                },
+                {
+                    "text": "Nice to meet you.",
+                    "start": 6.64,
+                    "end": 7.44
+                },
+                {
+                    "text": "Have a seat, please.",
+                    "start": 7.44,
+                    "end": 8.32
+                },
+                {
+                    "text": "Thank you.",
+                    "start": 8.32,
+                    "end": 8.98
+                },
+                {
+                    "text": "Well, Bobby, uh, what time did you think your interview was today?",
+                    "start": 12.895,
+                    "end": 16.035
+                }
+            ],
+            "start": 6.0,
+            "end": 16.035,
+            "num_words": 24,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Well, I I got up late because, uh, some guys were at the house and, uh, we were watching football last night.",
+                    "start": 16.575,
+                    "end": 23.295
+                },
+                {
+                    "text": "And then I think my watch battery died and so I stopped and got some breakfast this morning and Oh, okay.",
+                    "start": 23.295,
+                    "end": 28.926998
+                },
+                {
+                    "text": "And then my car broke down and so I'm running a little bit late.",
+                    "start": 29.126999,
+                    "end": 31.847
+                },
+                {
+                    "text": "Oh, okay.",
+                    "start": 31.847,
+                    "end": 32.487
+                },
+                {
+                    "text": "Uh, did you call?",
+                    "start": 32.487,
+                    "end": 33.192
+                }
+            ],
+            "start": 16.575,
+            "end": 33.192,
+            "num_words": 63,
+            "speaker": 0
+        }
+    ]
+}

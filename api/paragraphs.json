@@ -1,0 +1,20 @@
+[
+    {
+        "text": "Hi. Hi. I'm Bobby Frazier for the interview. Okay. Hi.",
+        "speaker": 1,
+        "start": 1.52,
+        "end": 6.0
+    },
+    {
+        "text": "I'm Stephanie. Nice to meet you. Have a seat, please. Thank you. Well, Bobby, uh, what time did you think your interview was today?",
+        "speaker": 1,
+        "start": 6.0,
+        "end": 16.035
+    },
+    {
+        "text": "Well, I I got up late because, uh, some guys were at the house and, uh, we were watching football last night. And then I think my watch battery died and so I stopped and got some breakfast this morning and Oh, okay. And then my car broke down and so I'm running a little bit late. Oh, okay. Uh, did you call?",
+        "speaker": 1,
+        "start": 16.575,
+        "end": 33.192
+    }
+]
