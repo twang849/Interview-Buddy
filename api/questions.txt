@@ -1,10 +1,15 @@
-What experience do you have with Python programming?
-Can you give us an example of a project where you used Python to solve a problem or create an application?
-How do you approach debugging a Python program? Can you walk us through your process?
-Are you familiar with any Python libraries or frameworks? Which ones have you used and how did they assist you in your projects?
-How do you handle version control in your Python projects?
-What is your experience with QBasic, and how have you applied it in your previous roles?
-Can you describe a situation where you used QBasic to enhance or streamline a task?
-How do you stay updated on the latest updates or trends in programming languages like Python or QBasic?
-Have you ever integrated Python with other programming languages or technologies? If so, can you describe the project and the outcome?
-What challenges have you faced when working with QBasic, and how did you overcome them?
+What experience do you have with designing and developing customized data sets and reports using programming languages and BI tools?
+Can you explain your process for gathering and documenting business requirements for data engineering projects?
+How have you utilized Azure services such as Synapse, Data Factory, or Delta Lake in previous roles?
+Could you describe a complex data profiling or mapping project you've worked on and the outcomes you achieved?
+How do you ensure data integrity and quality when analyzing and developing data sets?
+Describe your experience with SQL, Python, Power BI, R, or SAS in merging and analyzing data from various sources.
+How have you collaborated with both business and IT teams to enhance the utilization of data marts?
+What steps do you take to validate the accuracy of data before it is released to stakeholders?
+Can you provide an example of how you've improved internal data processes or increased automation efficiencies in the past?
+How do you develop and maintain comprehensive end-user documentation and ensure it stays up-to-date?
+What is your approach to resolving data incidents or defects through scheduled release processes?
+Describe your experience in defining and developing business and technical requirements for data products.
+How do you assist in creating briefing and presentation materials for management?
+Can you share a time when you had to work on a project with varying scope and complexity, such as gathering requirements and creating progress reports?
+Why are you interested in working with the Workplace Safety and Insurance Board, and how can you contribute to its mission?
