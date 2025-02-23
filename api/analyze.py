@@ -49,7 +49,7 @@ def deepgramAnalysis(filename):
     except Exception as e:
         return e
 
-def parse_json(json_data):
+def parseJSON(json_data):
     try:
         confidence = json_data["results"]["channels"][0]["alternatives"][0]["confidence"]
         paragraphs = json_data["results"]["channels"][0]["alternatives"][0]["paragraphs"]
@@ -66,22 +66,21 @@ def parse_json(json_data):
 # Retrieve transcripted dialogue from the interview
 def parseTranscript(filename, mode="interview"):
     response = deepgramAnalysis(filename)
-
-    parse = parse_json(response)
     with open("response.json", "w") as file:
+        json.dump(response, file, indent=4)
+
+    parse = parseJSON(response)
+    with open("parse.json", "w") as file:
         json.dump(parse, file, indent=4)
    
     max_tries = 2
     while (parse == "Low confidence"):
-        if max_tries <= 0:
-            break
+        if max_tries == 0:
+            print("Failed to get high confidence transcript")
+            return "Failed to get high confidence transcript"
         response = deepgramAnalysis(filename)
-        parse = parse_json(response)
+        parse = parseJSON(response)
         max_tries -= 1
-
-    if (max_tries == 0):
-        print("Failed to get high confidence transcript")
-        return "Failed to get high confidence transcript"
 
     transcript = parse["transcript"]
     paragraphs = [{"text":" ".join([j["text"] for j in i["sentences"]]),
@@ -95,7 +94,7 @@ def parseTranscript(filename, mode="interview"):
         json.dump(paragraphs, file, indent=4)
 
     processed = ""
-    for i in range(len(paragraphs) - 1):
+    for i in range(len(paragraphs)):
         processed += "Speaker " + str(paragraphs[i]["speaker"]) + ": "
         processed += paragraphs[i]["text"]
         processed += "\n"
@@ -103,6 +102,8 @@ def parseTranscript(filename, mode="interview"):
             if pauses[i] > 0:
                 processed += " (pause for " + "{:.2f}".format(pauses[i]) + " seconds) "
         processed += "\n"
+
+    print(processed)
 
     return processed
 
@@ -169,13 +170,8 @@ def short_form(prompt, context=
 
 def main(filename):
     interviewTranscript = parseTranscript(filename)
-    # print(prompt)
-
     longform = long_form(interviewTranscript)
-    # print(longform)
-
     shortform = short_form(interviewTranscript)
-    # print(shortform)
 
     result = {"transcript": interviewTranscript, "long_form": longform, "short_form": shortform}
     return result

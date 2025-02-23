@@ -20,7 +20,7 @@ function DefaultPage() {
   // Function for handling file upload
   const uploadFile = async (event) => {
     event.preventDefault();
-    
+
     const formData = new FormData();
     if (!file) {
       setError("Please select a file before uploading.");
@@ -113,14 +113,20 @@ function DefaultPage() {
   };
 
   return (
-    <div>
+    <div id="page">
       <title>InterviewBuddy</title>
 
       <div id="title-box">
         <h1 id="title"> InterviewBuddy</h1>
-        <h3>Interview Buddy is a web-based platform that helps users improve their 
-            interview skills through unlimited, personalized practice.</h3>
       </div>
+
+    <div id="subtitle">Interview Buddy is a web-based platform that helps users improve 
+        <br/>
+        their interview skills through unlimited, personalized practice.
+        <br/>
+        <br/>
+        Copy and paste job description/posting below, then hit 'Submit Text'!"
+    </div>
       
     <div className='DefaultPage'>
       {error && <p className="error">{error}</p>}
@@ -182,11 +188,9 @@ function DefaultPage() {
       </form>
 
       {/* Feedback and Transcript */}
-        <div className="feedback-text">
-          <h1>Analysis Result</h1>
 
-          {/* Feedback */}
           <div id='feedback-transcript-box'>
+            {/* Feedback */}
             <div>
               <h2>Feedback</h2>
               <ul id="tips" className='questions-box'>
@@ -202,7 +206,7 @@ function DefaultPage() {
              </div>
             </div>
           </div>
-        </div>
+
         
       
       </div>
