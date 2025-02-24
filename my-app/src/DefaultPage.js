@@ -77,7 +77,6 @@ function DefaultPage() {
 
   const renderFeedback = () => {
     if (!response) return null;
-
     return (
       <div>
         {response.feedback.tips.map((tip, index) => (
@@ -101,8 +100,8 @@ function DefaultPage() {
   }
 
   const renderQuestions = () => {
-    if (!questions) return null;
-
+    if (!questions) return <div>No questions available. Submit a job posting to receive practice questions.</div>;
+    
     return (
         <ul id="question-list">
           {questions.questions.map((tip, index) => (
@@ -193,17 +192,30 @@ function DefaultPage() {
             {/* Feedback */}
             <div>
               <h2>Feedback</h2>
-              <ul id="tips" className='questions-box'>
-                {renderFeedback()}
-              </ul>
+              {response ? (
+                <ul id="tips" className='questions-box'>
+                  {renderFeedback()}
+                </ul>
+              ) : (
+                <div id="tips" className='questions-box' style={{textAlign: 'center', color: 'rgb(0,0,0,0.5)'}}>
+                  No feedback available. Upload an audio recording to view feedback.
+                </div>
+              )}
             </div>
             
             {/* Transcript */}
             <div>
               <h2>Transcript</h2>
-              <div className="questions-box" style={{textAlign: 'justify', color: 'black'}}>
-                {renderTranscript()}
-             </div>
+              {response ? (
+                <div className="questions-box" style={{color: 'black'}}>
+                  {renderTranscript()}
+                </div>
+              ) : (
+                <div className="questions-box" style={{textAlign: 'center', color: 'rgb(0,0,0,0.5)'}}>
+                  No transcript available. Upload an audio recording to view transcript.
+                </div>
+              )}
+              
             </div>
           </div>
       </div>

@@ -1,20 +1,356 @@
 [
     {
-        "text": "Hi. Hi. I'm Bobby Frazier for the interview. Okay. Hi.",
+        "text": "Hi. Hi.",
         "speaker": 1,
-        "start": 1.52,
-        "end": 6.0
+        "start": 11.28,
+        "end": 11.92
     },
     {
-        "text": "I'm Stephanie. Nice to meet you. Have a seat, please. Thank you. Well, Bobby, uh, what time did you think your interview was today?",
-        "speaker": 1,
-        "start": 6.0,
-        "end": 16.035
+        "text": "I'm Bobby Frazier for the interview.",
+        "speaker": 2,
+        "start": 11.92,
+        "end": 13.62
     },
     {
-        "text": "Well, I I got up late because, uh, some guys were at the house and, uh, we were watching football last night. And then I think my watch battery died and so I stopped and got some breakfast this morning and Oh, okay. And then my car broke down and so I'm running a little bit late. Oh, okay. Uh, did you call?",
+        "text": "Okay. Hi. I'm Stephanie. Nice to meet you. Have a seat, please.",
         "speaker": 1,
-        "start": 16.575,
-        "end": 33.192
+        "start": 13.759999,
+        "end": 18.055
+    },
+    {
+        "text": "Thank you.",
+        "speaker": 2,
+        "start": 18.055,
+        "end": 18.795
+    },
+    {
+        "text": "Well, Bobby, uh, what time did you think your interview was today?",
+        "speaker": 1,
+        "start": 22.615,
+        "end": 25.835
+    },
+    {
+        "text": "Well, I I got up late because, uh, some guys were at the house, and, uh, we were watching football last night. And then I think my watch battery died, and so I stopped and got some breakfast this morning. And Oh, okay. And then my car broke down, and so I'm running a little bit late.",
+        "speaker": 2,
+        "start": 26.375,
+        "end": 41.6
+    },
+    {
+        "text": "Oh, okay. Uh, did you call our office and let anyone know that you were gonna be running late?",
+        "speaker": 1,
+        "start": 41.6,
+        "end": 45.435
+    },
+    {
+        "text": "No. I",
+        "speaker": 2,
+        "start": 45.675003,
+        "end": 46.415
+    },
+    {
+        "text": "didn't. So, Bobby, tell me what position you're here interviewing for today?",
+        "speaker": 1,
+        "start": 46.875,
+        "end": 49.935
+    },
+    {
+        "text": "For the maintenance position.",
+        "speaker": 2,
+        "start": 49.995003,
+        "end": 51.455
+    },
+    {
+        "text": "Okay. Very good. How did you find out about this maintenance position?",
+        "speaker": 1,
+        "start": 51.675003,
+        "end": 54.415
+    },
+    {
+        "text": "Uh, from the workforce.",
+        "speaker": 2,
+        "start": 54.635002,
+        "end": 55.695
+    },
+    {
+        "text": "Okay. And so they sent you over?",
+        "speaker": 1,
+        "start": 55.995003,
+        "end": 57.675003
+    },
+    {
+        "text": "Yes. They did.",
+        "speaker": 2,
+        "start": 57.675003,
+        "end": 58.475002
+    },
+    {
+        "text": "Okay. Well, Bobby, tell me a little bit about your maintenance background.",
+        "speaker": 1,
+        "start": 58.475002,
+        "end": 61.51
+    },
+    {
+        "text": "Well, I've worked in a few places just doing general maintenance for plumbing, electrical. No. I don't have any certificates or anything, but I can do anything.",
+        "speaker": 2,
+        "start": 61.969997,
+        "end": 70.549995
+    },
+    {
+        "text": "Can do anything. Okay.",
+        "speaker": 1,
+        "start": 70.93,
+        "end": 72.21
+    },
+    {
+        "text": "Yes. Uh, let",
+        "speaker": 2,
+        "start": 72.21,
+        "end": 73.284996
+    },
+    {
+        "text": "me ask you this. How many times do you think it's okay to be late in a six month period?",
+        "speaker": 1,
+        "start": 73.284996,
+        "end": 77.145
+    },
+    {
+        "text": "Uh, well, it depends on what's on sports, football or basketball or baseball, uh, and how late they play and if they go in extra innings. I don't know.",
+        "speaker": 2,
+        "start": 77.685,
+        "end": 86.244995
+    },
+    {
+        "text": "So you're a big sports fan.",
+        "speaker": 1,
+        "start": 86.244995,
+        "end": 87.765
+    },
+    {
+        "text": "Yes.",
+        "speaker": 2,
+        "start": 87.765,
+        "end": 87.924995
+    },
+    {
+        "text": "I can tell. Okay. Bobby, if I were to go talk to some of your previous coworkers at your last job, what would they say about you as an employee?",
+        "speaker": 1,
+        "start": 87.924995,
+        "end": 94.84
+    },
+    {
+        "text": "Uh, well, I I was there working and made them laugh a lot and I just I shared my food and every time I come in.",
+        "speaker": 2,
+        "start": 96.1,
+        "end": 105.995
+    },
+    {
+        "text": "K. I bet they lied to you. Right? Yes. What would they say is something that you need to work on?",
+        "speaker": 1,
+        "start": 105.995,
+        "end": 110.335
+    },
+    {
+        "text": "Um, probably coming to work when I'm supposed to.",
+        "speaker": 2,
+        "start": 111.675,
+        "end": 117.055
+    },
+    {
+        "text": "So Bobby, in your previous maintenance position, how long were you at your last job?",
+        "speaker": 1,
+        "start": 118.68,
+        "end": 122.54
+    },
+    {
+        "text": "Uh, I was there for about three months.",
+        "speaker": 2,
+        "start": 122.920006,
+        "end": 124.920006
+    },
+    {
+        "text": "Three months? Okay. And what happened there? What was your reason for leaving?",
+        "speaker": 1,
+        "start": 124.920006,
+        "end": 127.82001
+    },
+    {
+        "text": "Uh, me and the the site manager didn't get along too good.",
+        "speaker": 2,
+        "start": 128.28,
+        "end": 132.015
+    },
+    {
+        "text": "Oh, okay.",
+        "speaker": 1,
+        "start": 132.175,
+        "end": 132.915
+    },
+    {
+        "text": "Oh, wait a minute. Hello? Yes. Yeah. I'm I'm in an interview right now, but just hold there.",
+        "speaker": 2,
+        "start": 133.535,
+        "end": 144.995
+    },
+    {
+        "text": "Game's gonna start in a few minutes and, uh, just give me a cold one. Okay? Bye. Sorry about that.",
+        "speaker": 2,
+        "start": 145.49,
+        "end": 151.09
+    },
+    {
+        "text": "Hey. Would you like to put your phone on mute so we can not have any more disruption?",
+        "speaker": 1,
+        "start": 151.09,
+        "end": 154.47
+    },
+    {
+        "text": "Sure. I I can take care of that.",
+        "speaker": 2,
+        "start": 154.69,
+        "end": 155.89
+    },
+    {
+        "text": "Please. Thank you.",
+        "speaker": 1,
+        "start": 155.89,
+        "end": 156.87001
+    },
+    {
+        "text": "Okay. There we go.",
+        "speaker": 2,
+        "start": 158.865,
+        "end": 159.985
+    },
+    {
+        "text": "Very good. Thank you for that. And so you were telling me about your last position. You were there three months.",
+        "speaker": 1,
+        "start": 159.985,
+        "end": 164.485
+    },
+    {
+        "text": "Yes. Uh-huh.",
+        "speaker": 2,
+        "start": 165.02501,
+        "end": 165.845
+    },
+    {
+        "text": "And You like a cookie? I would not like a cookie. We can if you'd like take a little break and you can step out and finish your snack before we continue.",
+        "speaker": 1,
+        "start": 166.465,
+        "end": 174.51999
+    },
+    {
+        "text": "One cookie. That's all I need.",
+        "speaker": 2,
+        "start": 174.68,
+        "end": 175.64
+    },
+    {
+        "text": "Just one cookie. You need a little something on your stomach. Okay. Okay. So, Bobby, the last position you left, you didn't get along with your supervisor.",
+        "speaker": 1,
+        "start": 175.64,
+        "end": 182.14
+    },
+    {
+        "text": "Correct?",
+        "speaker": 1,
+        "start": 183.07999,
+        "end": 183.57999
+    },
+    {
+        "text": "Right.",
+        "speaker": 2,
+        "start": 183.87999,
+        "end": 184.37999
+    },
+    {
+        "text": "Tell me the the job before that. How long were you at that position?",
+        "speaker": 1,
+        "start": 184.59999,
+        "end": 187.5
+    },
+    {
+        "text": "Almost a month.",
+        "speaker": 2,
+        "start": 190.255,
+        "end": 191.315
+    },
+    {
+        "text": "Okay. And what was your reason for leaving there?",
+        "speaker": 1,
+        "start": 191.535,
+        "end": 194.27501
+    },
+    {
+        "text": "The plumbing guy didn't like the way I did some things and it leaked. So Oh, you had he let me go.",
+        "speaker": 2,
+        "start": 195.375,
+        "end": 202.68
+    },
+    {
+        "text": "The quality of your work wasn't quite where it needed to be.",
+        "speaker": 1,
+        "start": 202.76,
+        "end": 205.42
+    },
+    {
+        "text": "Well, I thought it was, but he didn't like it.",
+        "speaker": 2,
+        "start": 205.56,
+        "end": 208.76
+    },
+    {
+        "text": "Well, do you have any kind of process by which when you repair or you make a repair that you check your work to ensure everything's working properly before you leave the job?",
+        "speaker": 1,
+        "start": 208.76,
+        "end": 216.14
+    },
+    {
+        "text": "If it works when I get there if it doesn't work when I get there and it works when I leave, I'm good.",
+        "speaker": 2,
+        "start": 216.77501,
+        "end": 221.35501
+    },
+    {
+        "text": "Okay. Very good. Bobby, do you have any questions of me today?",
+        "speaker": 1,
+        "start": 221.41501,
+        "end": 225.35501
+    },
+    {
+        "text": "Uh, no. Just when can I start?",
+        "speaker": 2,
+        "start": 225.975,
+        "end": 227.655
+    },
+    {
+        "text": "When can you start? Well, we're gonna be back in touch with you. If you have any questions, you can call the front office, and they'll be glad to assist you.",
+        "speaker": 1,
+        "start": 227.655,
+        "end": 235.98
+    },
+    {
+        "text": "Okay.",
+        "speaker": 2,
+        "start": 235.98,
+        "end": 236.37999
+    },
+    {
+        "text": "Okay? Thank you for coming in today.",
+        "speaker": 1,
+        "start": 236.37999,
+        "end": 237.98
+    },
+    {
+        "text": "Thank you.",
+        "speaker": 2,
+        "start": 237.98,
+        "end": 238.45999
+    },
+    {
+        "text": "Bye bye.",
+        "speaker": 1,
+        "start": 238.45999,
+        "end": 239.2
     }
 ]

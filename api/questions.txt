@@ -1,15 +1,19 @@
-What experience do you have with designing and developing customized data sets and reports using programming languages and BI tools?
-Can you explain your process for gathering and documenting business requirements for data engineering projects?
-How have you utilized Azure services such as Synapse, Data Factory, or Delta Lake in previous roles?
-Could you describe a complex data profiling or mapping project you've worked on and the outcomes you achieved?
-How do you ensure data integrity and quality when analyzing and developing data sets?
-Describe your experience with SQL, Python, Power BI, R, or SAS in merging and analyzing data from various sources.
-How have you collaborated with both business and IT teams to enhance the utilization of data marts?
-What steps do you take to validate the accuracy of data before it is released to stakeholders?
-Can you provide an example of how you've improved internal data processes or increased automation efficiencies in the past?
-How do you develop and maintain comprehensive end-user documentation and ensure it stays up-to-date?
-What is your approach to resolving data incidents or defects through scheduled release processes?
-Describe your experience in defining and developing business and technical requirements for data products.
-How do you assist in creating briefing and presentation materials for management?
-Can you share a time when you had to work on a project with varying scope and complexity, such as gathering requirements and creating progress reports?
-Why are you interested in working with the Workplace Safety and Insurance Board, and how can you contribute to its mission?
+Can you describe any personal projects or experiences that demonstrate your passion for innovation in technology?
+How comfortable are you with navigating different computer operating systems?
+Please tell us about any previous exposure you have had to IT support.
+Can you give an example of a time when you provided excellent communication and customer support?
+Are you pursuing a degree in Computer Science or a related field? How does this align with your career goals?
+How do you approach learning new skills or concepts, particularly in a fast-paced environment?
+When faced with a problem, how do you ensure your approach is both organized and solutions-oriented?
+Describe a scenario where you effectively collaborated with others on a team task.
+How do you prioritize and communicate your needs or challenges to others in the workplace?
+Can you provide an example of how you've managed your time effectively in a previous role or project?
+Do you have any previous IT experience that you'd like to share?
+What excites you most about the opportunity to work with Activision Central Technology and contribute to the gaming industry?
+How do you view the role of diversity and inclusion within an organization, particularly in the tech and gaming sectors?
+What draws you to this internship position, and how does it align with your future career aspirations in technology?
+How do you keep yourself motivated and engaged in a project or task over an extended period?
+Can you discuss any experiences where you've delivered against targets or goals in a demanding environment?
+How do you maintain a balance of seriousness and light-heartedness in your work environment?
+Are you willing and able to be onsite 5 days a week as required by this role?
+What are your thoughts on participating in a diverse team on initiatives that impact global entertainment franchises like Call of Duty and Guitar Hero?

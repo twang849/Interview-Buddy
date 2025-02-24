@@ -1,103 +1,1081 @@
 {
-    "transcript": "\nSpeaker 0: Hi. Hi. I'm Bobby Frazier for the interview. Okay. Hi.\n\nI'm Stephanie. Nice to meet you. Have a seat, please. Thank you. Well, Bobby, uh, what time did you think your interview was today?\n\nWell, I I got up late because, uh, some guys were at the house and, uh, we were watching football last night. And then I think my watch battery died and so I stopped and got some breakfast this morning and Oh, okay. And then my car broke down and so I'm running a little bit late. Oh, okay. Uh, did you call?",
+    "transcript": "\nSpeaker 0: Hi. Hi.\n\nSpeaker 1: I'm Bobby Frazier for the interview.\n\nSpeaker 0: Okay. Hi. I'm Stephanie. Nice to meet you. Have a seat, please.\n\nSpeaker 1: Thank you.\n\nSpeaker 0: Well, Bobby, uh, what time did you think your interview was today?\n\nSpeaker 1: Well, I I got up late because, uh, some guys were at the house, and, uh, we were watching football last night. And then I think my watch battery died, and so I stopped and got some breakfast this morning. And Oh, okay. And then my car broke down, and so I'm running a little bit late.\n\nSpeaker 0: Oh, okay. Uh, did you call our office and let anyone know that you were gonna be running late?\n\nSpeaker 1: No. I\n\nSpeaker 0: didn't. So, Bobby, tell me what position you're here interviewing for today?\n\nSpeaker 1: For the maintenance position.\n\nSpeaker 0: Okay. Very good. How did you find out about this maintenance position?\n\nSpeaker 1: Uh, from the workforce.\n\nSpeaker 0: Okay. And so they sent you over?\n\nSpeaker 1: Yes. They did.\n\nSpeaker 0: Okay. Well, Bobby, tell me a little bit about your maintenance background.\n\nSpeaker 1: Well, I've worked in a few places just doing general maintenance for plumbing, electrical. No. I don't have any certificates or anything, but I can do anything.\n\nSpeaker 0: Can do anything. Okay.\n\nSpeaker 1: Yes. Uh, let\n\nSpeaker 0: me ask you this. How many times do you think it's okay to be late in a six month period?\n\nSpeaker 1: Uh, well, it depends on what's on sports, football or basketball or baseball, uh, and how late they play and if they go in extra innings. I don't know.\n\nSpeaker 0: So you're a big sports fan.\n\nSpeaker 1: Yes.\n\nSpeaker 0: I can tell. Okay. Bobby, if I were to go talk to some of your previous coworkers at your last job, what would they say about you as an employee?\n\nSpeaker 1: Uh, well, I I was there working and made them laugh a lot and I just I shared my food and every time I come in.\n\nSpeaker 0: K. I bet they lied to you. Right? Yes. What would they say is something that you need to work on?\n\nSpeaker 1: Um, probably coming to work when I'm supposed to.\n\nSpeaker 0: So Bobby, in your previous maintenance position, how long were you at your last job?\n\nSpeaker 1: Uh, I was there for about three months.\n\nSpeaker 0: Three months? Okay. And what happened there? What was your reason for leaving?\n\nSpeaker 1: Uh, me and the the site manager didn't get along too good.\n\nSpeaker 0: Oh, okay.\n\nSpeaker 1: Oh, wait a minute. Hello? Yes. Yeah. I'm I'm in an interview right now, but just hold there.\n\nGame's gonna start in a few minutes and, uh, just give me a cold one. Okay? Bye. Sorry about that.\n\nSpeaker 0: Hey. Would you like to put your phone on mute so we can not have any more disruption?\n\nSpeaker 1: Sure. I I can take care of that.\n\nSpeaker 0: Please. Thank you.\n\nSpeaker 1: Okay. There we go.\n\nSpeaker 0: Very good. Thank you for that. And so you were telling me about your last position. You were there three months.\n\nSpeaker 1: Yes. Uh-huh.\n\nSpeaker 0: And You like a cookie? I would not like a cookie. We can if you'd like take a little break and you can step out and finish your snack before we continue.\n\nSpeaker 1: One cookie. That's all I need.\n\nSpeaker 0: Just one cookie. You need a little something on your stomach. Okay. Okay. So, Bobby, the last position you left, you didn't get along with your supervisor.\n\nCorrect?\n\nSpeaker 1: Right.\n\nSpeaker 0: Tell me the the job before that. How long were you at that position?\n\nSpeaker 1: Almost a month.\n\nSpeaker 0: Okay. And what was your reason for leaving there?\n\nSpeaker 1: The plumbing guy didn't like the way I did some things and it leaked. So Oh, you had he let me go.\n\nSpeaker 0: The quality of your work wasn't quite where it needed to be.\n\nSpeaker 1: Well, I thought it was, but he didn't like it.\n\nSpeaker 0: Well, do you have any kind of process by which when you repair or you make a repair that you check your work to ensure everything's working properly before you leave the job?\n\nSpeaker 1: If it works when I get there if it doesn't work when I get there and it works when I leave, I'm good.\n\nSpeaker 0: Okay. Very good. Bobby, do you have any questions of me today?\n\nSpeaker 1: Uh, no. Just when can I start?\n\nSpeaker 0: When can you start? Well, we're gonna be back in touch with you. If you have any questions, you can call the front office, and they'll be glad to assist you.\n\nSpeaker 1: Okay.\n\nSpeaker 0: Okay? Thank you for coming in today.\n\nSpeaker 1: Thank you.\n\nSpeaker 0: Bye bye.",
     "paragraphs": [
         {
             "sentences": [
                 {
                     "text": "Hi.",
-                    "start": 1.52,
-                    "end": 2.0
+                    "start": 11.28,
+                    "end": 11.679999
                 },
                 {
                     "text": "Hi.",
-                    "start": 2.0,
-                    "end": 2.1599998
-                },
-                {
-                    "text": "I'm Bobby Frazier for the interview.",
-                    "start": 2.1599998,
-                    "end": 3.9399998
-                },
-                {
-                    "text": "Okay.",
-                    "start": 4.0,
-                    "end": 4.5
-                },
-                {
-                    "text": "Hi.",
-                    "start": 5.7599998,
-                    "end": 6.0
+                    "start": 11.679999,
+                    "end": 11.92
                 }
             ],
-            "start": 1.52,
-            "end": 6.0,
-            "num_words": 10,
+            "start": 11.28,
+            "end": 11.92,
+            "num_words": 2,
             "speaker": 0
         },
         {
             "sentences": [
                 {
+                    "text": "I'm Bobby Frazier for the interview.",
+                    "start": 11.92,
+                    "end": 13.62
+                }
+            ],
+            "start": 11.92,
+            "end": 13.62,
+            "num_words": 6,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Okay.",
+                    "start": 13.759999,
+                    "end": 14.259999
+                },
+                {
+                    "text": "Hi.",
+                    "start": 15.495,
+                    "end": 15.815
+                },
+                {
                     "text": "I'm Stephanie.",
-                    "start": 6.0,
-                    "end": 6.64
+                    "start": 15.815,
+                    "end": 16.455
                 },
                 {
                     "text": "Nice to meet you.",
-                    "start": 6.64,
-                    "end": 7.44
+                    "start": 16.455,
+                    "end": 17.255
                 },
                 {
                     "text": "Have a seat, please.",
-                    "start": 7.44,
-                    "end": 8.32
-                },
-                {
-                    "text": "Thank you.",
-                    "start": 8.32,
-                    "end": 8.98
-                },
-                {
-                    "text": "Well, Bobby, uh, what time did you think your interview was today?",
-                    "start": 12.895,
-                    "end": 16.035
+                    "start": 17.255,
+                    "end": 18.055
                 }
             ],
-            "start": 6.0,
-            "end": 16.035,
-            "num_words": 24,
+            "start": 13.759999,
+            "end": 18.055,
+            "num_words": 12,
             "speaker": 0
         },
         {
             "sentences": [
                 {
-                    "text": "Well, I I got up late because, uh, some guys were at the house and, uh, we were watching football last night.",
-                    "start": 16.575,
-                    "end": 23.295
-                },
-                {
-                    "text": "And then I think my watch battery died and so I stopped and got some breakfast this morning and Oh, okay.",
-                    "start": 23.295,
-                    "end": 28.926998
-                },
-                {
-                    "text": "And then my car broke down and so I'm running a little bit late.",
-                    "start": 29.126999,
-                    "end": 31.847
-                },
-                {
-                    "text": "Oh, okay.",
-                    "start": 31.847,
-                    "end": 32.487
-                },
-                {
-                    "text": "Uh, did you call?",
-                    "start": 32.487,
-                    "end": 33.192
+                    "text": "Thank you.",
+                    "start": 18.055,
+                    "end": 18.795
                 }
             ],
-            "start": 16.575,
-            "end": 33.192,
-            "num_words": 63,
+            "start": 18.055,
+            "end": 18.795,
+            "num_words": 2,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Well, Bobby, uh, what time did you think your interview was today?",
+                    "start": 22.615,
+                    "end": 25.835
+                }
+            ],
+            "start": 22.615,
+            "end": 25.835,
+            "num_words": 12,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Well, I I got up late because, uh, some guys were at the house, and, uh, we were watching football last night.",
+                    "start": 26.375,
+                    "end": 33.12
+                },
+                {
+                    "text": "And then I think my watch battery died, and so I stopped and got some breakfast this morning.",
+                    "start": 33.12,
+                    "end": 38.0
+                },
+                {
+                    "text": "And Oh, okay.",
+                    "start": 38.0,
+                    "end": 38.68
+                },
+                {
+                    "text": "And then my car broke down, and so I'm running a little bit late.",
+                    "start": 38.88,
+                    "end": 41.6
+                }
+            ],
+            "start": 26.375,
+            "end": 41.6,
+            "num_words": 57,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Oh, okay.",
+                    "start": 41.6,
+                    "end": 42.239998
+                },
+                {
+                    "text": "Uh, did you call our office and let anyone know that you were gonna be running late?",
+                    "start": 42.239998,
+                    "end": 45.435
+                }
+            ],
+            "start": 41.6,
+            "end": 45.435,
+            "num_words": 19,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "No.",
+                    "start": 45.675003,
+                    "end": 45.915
+                },
+                {
+                    "text": "I",
+                    "start": 45.915,
+                    "end": 46.415
+                }
+            ],
+            "start": 45.675003,
+            "end": 46.415,
+            "num_words": 2,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "didn't.",
+                    "start": 46.875,
+                    "end": 47.115
+                },
+                {
+                    "text": "So, Bobby, tell me what position you're here interviewing for today?",
+                    "start": 47.115,
+                    "end": 49.935
+                }
+            ],
+            "start": 46.875,
+            "end": 49.935,
+            "num_words": 12,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "For the maintenance position.",
+                    "start": 49.995003,
+                    "end": 51.455
+                }
+            ],
+            "start": 49.995003,
+            "end": 51.455,
+            "num_words": 4,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Okay.",
+                    "start": 51.675003,
+                    "end": 51.995003
+                },
+                {
+                    "text": "Very good.",
+                    "start": 51.995003,
+                    "end": 52.395
+                },
+                {
+                    "text": "How did you find out about this maintenance position?",
+                    "start": 52.395,
+                    "end": 54.415
+                }
+            ],
+            "start": 51.675003,
+            "end": 54.415,
+            "num_words": 12,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Uh, from the workforce.",
+                    "start": 54.635002,
+                    "end": 55.695
+                }
+            ],
+            "start": 54.635002,
+            "end": 55.695,
+            "num_words": 4,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Okay.",
+                    "start": 55.995003,
+                    "end": 56.315002
+                },
+                {
+                    "text": "And so they sent you over?",
+                    "start": 56.315002,
+                    "end": 57.675003
+                }
+            ],
+            "start": 55.995003,
+            "end": 57.675003,
+            "num_words": 7,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Yes.",
+                    "start": 57.675003,
+                    "end": 57.915
+                },
+                {
+                    "text": "They did.",
+                    "start": 57.915,
+                    "end": 58.475002
+                }
+            ],
+            "start": 57.675003,
+            "end": 58.475002,
+            "num_words": 3,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Okay.",
+                    "start": 58.475002,
+                    "end": 58.975002
+                },
+                {
+                    "text": "Well, Bobby, tell me a little bit about your maintenance background.",
+                    "start": 59.25,
+                    "end": 61.51
+                }
+            ],
+            "start": 58.475002,
+            "end": 61.51,
+            "num_words": 12,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Well, I've worked in a few places just doing general maintenance for plumbing, electrical.",
+                    "start": 61.969997,
+                    "end": 66.869995
+                },
+                {
+                    "text": "No.",
+                    "start": 67.57,
+                    "end": 67.729996
+                },
+                {
+                    "text": "I don't have any certificates or anything, but I can do anything.",
+                    "start": 67.729996,
+                    "end": 70.549995
+                }
+            ],
+            "start": 61.969997,
+            "end": 70.549995,
+            "num_words": 27,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Can do anything.",
+                    "start": 70.93,
+                    "end": 71.81
+                },
+                {
+                    "text": "Okay.",
+                    "start": 71.81,
+                    "end": 72.21
+                }
+            ],
+            "start": 70.93,
+            "end": 72.21,
+            "num_words": 4,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Yes.",
+                    "start": 72.21,
+                    "end": 72.645
+                },
+                {
+                    "text": "Uh, let",
+                    "start": 73.045,
+                    "end": 73.284996
+                }
+            ],
+            "start": 72.21,
+            "end": 73.284996,
+            "num_words": 3,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "me ask you this.",
+                    "start": 73.284996,
+                    "end": 74.005
+                },
+                {
+                    "text": "How many times do you think it's okay to be late in a six month period?",
+                    "start": 74.005,
+                    "end": 77.145
+                }
+            ],
+            "start": 73.284996,
+            "end": 77.145,
+            "num_words": 20,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Uh, well, it depends on what's on sports, football or basketball or baseball, uh, and how late they play and if they go in extra innings.",
+                    "start": 77.685,
+                    "end": 85.524994
+                },
+                {
+                    "text": "I don't know.",
+                    "start": 85.524994,
+                    "end": 86.244995
+                }
+            ],
+            "start": 77.685,
+            "end": 86.244995,
+            "num_words": 29,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "So you're a big sports fan.",
+                    "start": 86.244995,
+                    "end": 87.765
+                }
+            ],
+            "start": 86.244995,
+            "end": 87.765,
+            "num_words": 6,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Yes.",
+                    "start": 87.765,
+                    "end": 87.924995
+                }
+            ],
+            "start": 87.765,
+            "end": 87.924995,
+            "num_words": 1,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "I can tell.",
+                    "start": 87.924995,
+                    "end": 88.5
+                },
+                {
+                    "text": "Okay.",
+                    "start": 88.66,
+                    "end": 89.16
+                },
+                {
+                    "text": "Bobby, if I were to go talk to some of your previous coworkers at your last job, what would they say about you as an employee?",
+                    "start": 89.7,
+                    "end": 94.84
+                }
+            ],
+            "start": 87.924995,
+            "end": 94.84,
+            "num_words": 30,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Uh, well, I I was there working and made them laugh a lot and I just I shared my food and every time I come in.",
+                    "start": 96.1,
+                    "end": 105.995
+                }
+            ],
+            "start": 96.1,
+            "end": 105.995,
+            "num_words": 26,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "K.",
+                    "start": 105.995,
+                    "end": 106.235
+                },
+                {
+                    "text": "I bet they lied to you.",
+                    "start": 106.235,
+                    "end": 107.034996
+                },
+                {
+                    "text": "Right?",
+                    "start": 107.034996,
+                    "end": 107.515
+                },
+                {
+                    "text": "Yes.",
+                    "start": 107.515,
+                    "end": 108.015
+                },
+                {
+                    "text": "What would they say is something that you need to work on?",
+                    "start": 108.075,
+                    "end": 110.335
+                }
+            ],
+            "start": 105.995,
+            "end": 110.335,
+            "num_words": 21,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Um, probably coming to work when I'm supposed to.",
+                    "start": 111.675,
+                    "end": 117.055
+                }
+            ],
+            "start": 111.675,
+            "end": 117.055,
+            "num_words": 9,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "So Bobby, in your previous maintenance position, how long were you at your last job?",
+                    "start": 118.68,
+                    "end": 122.54
+                }
+            ],
+            "start": 118.68,
+            "end": 122.54,
+            "num_words": 15,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Uh, I was there for about three months.",
+                    "start": 122.920006,
+                    "end": 124.920006
+                }
+            ],
+            "start": 122.920006,
+            "end": 124.920006,
+            "num_words": 8,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Three months?",
+                    "start": 124.920006,
+                    "end": 125.560005
+                },
+                {
+                    "text": "Okay.",
+                    "start": 125.560005,
+                    "end": 125.880005
+                },
+                {
+                    "text": "And what happened there?",
+                    "start": 125.880005,
+                    "end": 126.520004
+                },
+                {
+                    "text": "What was your reason for leaving?",
+                    "start": 126.520004,
+                    "end": 127.82001
+                }
+            ],
+            "start": 124.920006,
+            "end": 127.82001,
+            "num_words": 13,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Uh, me and the the site manager didn't get along too good.",
+                    "start": 128.28,
+                    "end": 132.015
+                }
+            ],
+            "start": 128.28,
+            "end": 132.015,
+            "num_words": 12,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Oh, okay.",
+                    "start": 132.175,
+                    "end": 132.915
+                }
+            ],
+            "start": 132.175,
+            "end": 132.915,
+            "num_words": 2,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Oh, wait a minute.",
+                    "start": 133.535,
+                    "end": 134.835
+                },
+                {
+                    "text": "Hello?",
+                    "start": 137.855,
+                    "end": 138.355
+                },
+                {
+                    "text": "Yes.",
+                    "start": 139.455,
+                    "end": 139.955
+                },
+                {
+                    "text": "Yeah.",
+                    "start": 141.215,
+                    "end": 141.455
+                },
+                {
+                    "text": "I'm I'm in an interview right now, but just hold there.",
+                    "start": 141.455,
+                    "end": 144.995
+                }
+            ],
+            "start": 133.535,
+            "end": 144.995,
+            "num_words": 18,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Game's gonna start in a few minutes and, uh, just give me a cold one.",
+                    "start": 145.49,
+                    "end": 148.21
+                },
+                {
+                    "text": "Okay?",
+                    "start": 148.21,
+                    "end": 148.71
+                },
+                {
+                    "text": "Bye.",
+                    "start": 148.85,
+                    "end": 149.35
+                },
+                {
+                    "text": "Sorry about that.",
+                    "start": 150.29001,
+                    "end": 151.09
+                }
+            ],
+            "start": 145.49,
+            "end": 151.09,
+            "num_words": 20,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Hey.",
+                    "start": 151.09,
+                    "end": 151.25
+                },
+                {
+                    "text": "Would you like to put your phone on mute so we can not have any more disruption?",
+                    "start": 151.25,
+                    "end": 154.47
+                }
+            ],
+            "start": 151.09,
+            "end": 154.47,
+            "num_words": 18,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Sure.",
+                    "start": 154.69,
+                    "end": 154.85
+                },
+                {
+                    "text": "I I can take care of that.",
+                    "start": 154.85,
+                    "end": 155.89
+                }
+            ],
+            "start": 154.69,
+            "end": 155.89,
+            "num_words": 8,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Please.",
+                    "start": 155.89,
+                    "end": 156.13
+                },
+                {
+                    "text": "Thank you.",
+                    "start": 156.13,
+                    "end": 156.87001
+                }
+            ],
+            "start": 155.89,
+            "end": 156.87001,
+            "num_words": 3,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Okay.",
+                    "start": 158.865,
+                    "end": 159.265
+                },
+                {
+                    "text": "There we go.",
+                    "start": 159.265,
+                    "end": 159.985
+                }
+            ],
+            "start": 158.865,
+            "end": 159.985,
+            "num_words": 4,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Very good.",
+                    "start": 159.985,
+                    "end": 160.625
+                },
+                {
+                    "text": "Thank you for that.",
+                    "start": 160.625,
+                    "end": 161.425
+                },
+                {
+                    "text": "And so you were telling me about your last position.",
+                    "start": 161.425,
+                    "end": 163.265
+                },
+                {
+                    "text": "You were there three months.",
+                    "start": 163.265,
+                    "end": 164.485
+                }
+            ],
+            "start": 159.985,
+            "end": 164.485,
+            "num_words": 21,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Yes.",
+                    "start": 165.02501,
+                    "end": 165.345
+                },
+                {
+                    "text": "Uh-huh.",
+                    "start": 165.345,
+                    "end": 165.845
+                }
+            ],
+            "start": 165.02501,
+            "end": 165.845,
+            "num_words": 2,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "And You like a cookie?",
+                    "start": 166.465,
+                    "end": 168.325
+                },
+                {
+                    "text": "I would not like a cookie.",
+                    "start": 168.465,
+                    "end": 169.925
+                },
+                {
+                    "text": "We can if you'd like take a little break and you can step out and finish your snack before we continue.",
+                    "start": 170.145,
+                    "end": 174.51999
+                }
+            ],
+            "start": 166.465,
+            "end": 174.51999,
+            "num_words": 32,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "One cookie.",
+                    "start": 174.68,
+                    "end": 175.07999
+                },
+                {
+                    "text": "That's all I need.",
+                    "start": 175.07999,
+                    "end": 175.64
+                }
+            ],
+            "start": 174.68,
+            "end": 175.64,
+            "num_words": 6,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Just one cookie.",
+                    "start": 175.64,
+                    "end": 176.12
+                },
+                {
+                    "text": "You need a little something on your stomach.",
+                    "start": 176.12,
+                    "end": 177.79999
+                },
+                {
+                    "text": "Okay.",
+                    "start": 177.79999,
+                    "end": 178.2
+                },
+                {
+                    "text": "Okay.",
+                    "start": 178.2,
+                    "end": 178.7
+                },
+                {
+                    "text": "So, Bobby, the last position you left, you didn't get along with your supervisor.",
+                    "start": 178.76,
+                    "end": 182.14
+                }
+            ],
+            "start": 175.64,
+            "end": 182.14,
+            "num_words": 27,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Correct?",
+                    "start": 183.07999,
+                    "end": 183.57999
+                }
+            ],
+            "start": 183.07999,
+            "end": 183.57999,
+            "num_words": 1,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Right.",
+                    "start": 183.87999,
+                    "end": 184.37999
+                }
+            ],
+            "start": 183.87999,
+            "end": 184.37999,
+            "num_words": 1,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Tell me the the job before that.",
+                    "start": 184.59999,
+                    "end": 186.04
+                },
+                {
+                    "text": "How long were you at that position?",
+                    "start": 186.04,
+                    "end": 187.5
+                }
+            ],
+            "start": 184.59999,
+            "end": 187.5,
+            "num_words": 14,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Almost a month.",
+                    "start": 190.255,
+                    "end": 191.315
+                }
+            ],
+            "start": 190.255,
+            "end": 191.315,
+            "num_words": 3,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Okay.",
+                    "start": 191.535,
+                    "end": 192.035
+                },
+                {
+                    "text": "And what was your reason for leaving there?",
+                    "start": 192.41501,
+                    "end": 194.27501
+                }
+            ],
+            "start": 191.535,
+            "end": 194.27501,
+            "num_words": 9,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "The plumbing guy didn't like the way I did some things and it leaked.",
+                    "start": 195.375,
+                    "end": 200.815
+                },
+                {
+                    "text": "So Oh, you had he let me go.",
+                    "start": 200.815,
+                    "end": 202.68
+                }
+            ],
+            "start": 195.375,
+            "end": 202.68,
+            "num_words": 22,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "The quality of your work wasn't quite where it needed to be.",
+                    "start": 202.76,
+                    "end": 205.42
+                }
+            ],
+            "start": 202.76,
+            "end": 205.42,
+            "num_words": 12,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Well, I thought it was, but he didn't like it.",
+                    "start": 205.56,
+                    "end": 208.76
+                }
+            ],
+            "start": 205.56,
+            "end": 208.76,
+            "num_words": 10,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Well, do you have any kind of process by which when you repair or you make a repair that you check your work to ensure everything's working properly before you leave the job?",
+                    "start": 208.76,
+                    "end": 216.14
+                }
+            ],
+            "start": 208.76,
+            "end": 216.14,
+            "num_words": 33,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "If it works when I get there if it doesn't work when I get there and it works when I leave, I'm good.",
+                    "start": 216.77501,
+                    "end": 221.35501
+                }
+            ],
+            "start": 216.77501,
+            "end": 221.35501,
+            "num_words": 23,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Okay.",
+                    "start": 221.41501,
+                    "end": 221.91501
+                },
+                {
+                    "text": "Very good.",
+                    "start": 222.21501,
+                    "end": 223.035
+                },
+                {
+                    "text": "Bobby, do you have any questions of me today?",
+                    "start": 223.41501,
+                    "end": 225.35501
+                }
+            ],
+            "start": 221.41501,
+            "end": 225.35501,
+            "num_words": 12,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Uh, no.",
+                    "start": 225.975,
+                    "end": 226.455
+                },
+                {
+                    "text": "Just when can I start?",
+                    "start": 226.455,
+                    "end": 227.655
+                }
+            ],
+            "start": 225.975,
+            "end": 227.655,
+            "num_words": 7,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "When can you start?",
+                    "start": 227.655,
+                    "end": 228.455
+                },
+                {
+                    "text": "Well, we're gonna be back in touch with you.",
+                    "start": 228.455,
+                    "end": 231.035
+                },
+                {
+                    "text": "If you have any questions, you can call the front office, and they'll be glad to assist you.",
+                    "start": 232.21999,
+                    "end": 235.98
+                }
+            ],
+            "start": 227.655,
+            "end": 235.98,
+            "num_words": 31,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Okay.",
+                    "start": 235.98,
+                    "end": 236.37999
+                }
+            ],
+            "start": 235.98,
+            "end": 236.37999,
+            "num_words": 1,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Okay?",
+                    "start": 236.37999,
+                    "end": 236.7
+                },
+                {
+                    "text": "Thank you for coming in today.",
+                    "start": 236.7,
+                    "end": 237.98
+                }
+            ],
+            "start": 236.37999,
+            "end": 237.98,
+            "num_words": 7,
+            "speaker": 0
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Thank you.",
+                    "start": 237.98,
+                    "end": 238.45999
+                }
+            ],
+            "start": 237.98,
+            "end": 238.45999,
+            "num_words": 2,
+            "speaker": 1
+        },
+        {
+            "sentences": [
+                {
+                    "text": "Bye bye.",
+                    "start": 238.45999,
+                    "end": 239.2
+                }
+            ],
+            "start": 238.45999,
+            "end": 239.2,
+            "num_words": 2,
             "speaker": 0
         }
     ]
